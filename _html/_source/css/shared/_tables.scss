@@ -1,0 +1,31 @@
+table {
+	width: 100%;
+	text-align: center;
+
+	caption {
+		font-size: 10px;
+		margin-bottom: 14px;
+		text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: 1px;
+		text-align: center;
+	}
+
+	tr {
+		&:nth-child(even) {
+			background: #f3f3f3;
+		}
+	}
+	th {
+		padding: 13px 0px;
+		font-size: 16px;
+		font-weight: normal;
+		background-color: $blue;
+		text-align: center;
+		color: $white;
+	}
+	td {
+		padding: 15px 0px;
+		border-bottom: 1px solid $lightgrey;
+	}
+}

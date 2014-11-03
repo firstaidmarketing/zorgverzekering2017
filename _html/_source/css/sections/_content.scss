@@ -1,0 +1,74 @@
+.content{ 
+	h2 {
+		@extend %huge-font-size;
+		font-weight: bold;
+		color: $grey;
+		margin-bottom: rhythm(1);
+	}
+
+	.metainfo {
+		margin-bottom: rhythm(1);
+		color: $lighttext;
+		@include change-font-size(12px);
+		text-transform: uppercase;
+		font-weight: bold;
+
+		a {
+			color: $lighttext;
+		}
+
+		.info {
+			margin-right: 20px;
+
+			i {
+				margin-right: 5px;
+			}
+		}
+	}
+
+	article {
+		margin-bottom: rhythm(2);
+	}
+
+	.share {
+		@include clearfix;
+		margin-bottom: rhythm(2);
+		padding: rhythm(1);
+		background: $midgrey;
+
+		.label {
+			float: left;
+			font-weight: bold;
+			color: $black;
+			margin-right: 20px;
+		}
+
+		.share-item {
+			float: left;
+			margin-right: 10px;
+		}
+	}
+}
+
+.content-overview {
+
+	article {
+		@include clearfix;
+
+		.image {
+			@include span-columns( 4 );
+		}
+		.text {
+			@include span-columns( 8 );
+
+			&.full-text {
+				@include span-columns( 12 );
+			}
+
+			h2 {
+				@extend %bigger-font-size;
+				margin-bottom: rhythm(0.5);
+			}
+		}
+	}
+}

@@ -1,0 +1,235 @@
+.nav-main {
+	height: rhythm(3);
+
+	.sf-menu {
+		margin-left: 60px;
+
+		@include media( $desktop ) {
+			margin-left: 0;
+		}
+
+		li {
+			position: relative;
+			float: left;
+			text-align: center;
+			padding: rhythm(1) 0;
+			height: rhythm(3);
+			border-right: 1px solid #ececec;
+			background: $white;
+			z-index: 2;
+
+			a {
+				display: block;
+				padding: 5px 30px 0 30px;
+				border: 0;
+				@include transition ( color 0.2s ease-in-out, background-color 0.2s ease-in-out );
+				@include change-font-size(17px);
+
+				&.sf-with-ul {
+					padding-right: 30px;
+					margin-right: 20px;
+					@include sprite( right 3px);
+				}
+
+				@include media( $desktop ) {
+					padding-left: 20px;
+					padding-right: 20px;
+					@include change-font-size(15px);
+				}
+			}
+
+			&.home {
+				border-left: 1px solid #ececec;
+
+				a {
+					text-indent: -999em;
+					overflow: hidden;
+					margin-right: 20px;
+					@include sprite( 30px -52px);
+
+					&:hover {
+						background-position: 30px -142px;
+					}
+
+					@include media( $desktop ) {
+						background-position: 20px -52px;
+
+						&:hover {
+							background-position: 20px -142px;
+						}
+					}
+				}
+			}
+
+			&.mobile {
+				display: none;
+				cursor: pointer;
+
+				@include media( $tablet-portrait ) {
+					display: block;
+				}
+
+				span {
+					display: block;
+					width: 19px;
+					height: 3px;
+					margin: 4px 0;
+					background: $black;
+					z-index: 99;
+
+					@include transition ( background 0.2s ease-in-out );
+				}
+
+				&:hover {
+					span {
+						background-color: $link-color-hover;
+					}
+				}
+			}
+
+			&.hide-for-mobile {
+				display: block;
+
+				@include media( $tablet-portrait ) {
+					display: none;
+				}
+			}
+
+			&.search {
+				display: none;
+
+				@include media( $tablet ) {
+					display: block;
+				}
+				a {
+					padding-left: 30px;
+					padding-right: 30px;
+					text-indent: -999em;
+					overflow: hidden;
+					@include sprite( 20px -212px );
+				}
+			}
+
+			&.current-menu-item > a,
+			&.current-menu-ancestor > a,
+			a:hover {
+				color: $link-color-hover;
+			}
+
+			&.current-menu-item,
+			&.current-menu-ancestor {
+				// &:before,
+				// &:after {
+				//     position: absolute;
+				//     bottom: -25px;
+				//     content: '';
+				//     width: 50%;
+				//     height: 25px;
+				// }
+				// &:before {
+				//     left: 0px;
+				//     background: linear-gradient(to left bottom, $white 50%, transparent 50% );
+				// }
+				// &:after {
+				//     right: 0px;
+				//     background: linear-gradient(to right bottom, $white 50%, transparent 50%);
+				// }
+			}
+
+			ul {
+				background: $white;
+				border: 1px solid #ececec;
+				border-top-color: $white;
+				height: auto;
+				min-width: 200px;
+				margin: -1px 0 0 -1px;
+				-webkit-box-shadow: 2px 2px 4px 0px rgba(50, 50, 50, 0.1);
+				-moz-box-shadow:    2px 2px 4px 0px rgba(50, 50, 50, 0.1);
+				box-shadow:         2px 2px 4px 0px rgba(50, 50, 50, 0.1);
+
+				li {
+					float: none;
+					display: block;
+					height: auto;
+					padding: 0;
+					text-align: left;
+					line-height: rhythm(1);
+					border: 0;
+					border-bottom: 1px solid #ececec;
+
+					a {
+						padding: rhythm(0.5) 20px;
+						line-height: rhythm(1);
+						text-transform: none;
+						font-weight: normal;
+						background: none;
+						@include change-font-size(14px);
+
+						&:hover {
+							background: $lightgrey;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.mobile-nav-holder {
+	display: none;
+
+	@include media( $tablet-portrait ) {
+		position: fixed;
+		background: $white;
+		width: 100%;
+		padding: rhythm(1) 0;
+		z-index: 99;
+		-webkit-box-shadow: 0 3px 7px 3px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow:    0 3px 7px 3px rgba(0, 0, 0, 0.2);
+		box-shadow:         0 3px 7px 3px rgba(0, 0, 0, 0.2);
+		border-bottom: 2px solid $grey;
+
+		.hide-for-tablet {
+			display: block;
+		}
+
+		li {
+			float: none;
+			border-bottom: 1px solid $lightgrey;
+
+			@include media( $tablet-portrait ) {
+				&.hide-for-mobile {
+					display: block;
+				}
+			}
+
+			a {
+				padding-left: rhythm(1);
+				padding-right: rhythm(1);
+				@include change-font-size(17px);
+
+				&:hover {
+					color: $lightgreen;
+				}
+			}
+
+			.sub-menu {
+				display: block;
+				min-width: 0;
+				position: static;
+				padding-bottom: rhythm(1);
+
+				li {
+					padding-left: rhythm(2);
+					border: 0;
+
+					a {
+						border: 0;
+						padding: 0;
+						@include change-font-size(15px);
+					}
+				}
+			}
+		}
+	}
+}

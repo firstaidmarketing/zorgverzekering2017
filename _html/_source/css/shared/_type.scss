@@ -1,0 +1,74 @@
+@include establish-baseline;
+
+%small-font-size {
+    @include change-font-size($small-font-size);
+}
+
+%base-font-size {
+    @include change-font-size($base-font-size);
+}
+
+%bigger-font-size {
+    @include change-font-size($bigger-font-size);
+}
+
+%huge-font-size {
+    @include change-font-size($huge-font-size);
+}
+
+%header-1-size {
+    @include change-font-size($header-1-size);
+}
+
+%header-2-size {
+    @include change-font-size($header-2-size);
+}
+
+%header-3-size {
+    @include change-font-size($header-3-size);
+}
+
+
+body {
+	font-family: 'Lato', sans-serif;
+	color: $dark;
+}
+
+p {
+	@include clearfix;
+	margin: 0 0 1em 0;
+}
+
+a {
+	color: $link-color;
+	outline: none;
+	cursor: pointer;
+	text-decoration: none;
+
+	@include transition(color 0.2s ease-in-out);
+	
+	&:hover {
+		color: $link-color-hover;
+	}
+}
+
+h1, h2, h3 {
+	margin-bottom: rhythm(1);
+	font-weight: bold;
+}
+h1 {
+	@extend %header-1-size;
+}
+h2 {
+	@extend %header-2-size;
+}
+h3 {
+	@extend %header-3-size;
+}
+
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}

@@ -1,0 +1,70 @@
+@import "../lib/neat/neat-helpers";
+
+// Change the grid settings
+$visual-grid: false;
+$visual-grid-color: red;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.1;
+
+$column: 7.5%;
+$gutter: 2.5%;
+$grid-columns: 12;
+$max-width: 1154px;
+
+$fg-column: $column;
+$fg-gutter: $gutter;
+$max-width: 1154px;
+$outer-max-width: 1520px;
+
+// Define your breakpoints
+$large: new-breakpoint( min-width $outer-max-width 12 );
+$desktop: new-breakpoint( max-width $outer-max-width 12 );
+$tablet: new-breakpoint( max-width 960px 8 );
+$tablet-portrait: new-breakpoint( max-width 790px 8 );
+$mobile: new-breakpoint( max-width 580px 4 );
+
+// Font settings
+$small-font-size:   15px;
+$base-font-size:    15px;
+$base-line:         26px;
+$base-line-factor:  1.5;
+$bigger-font-size:  18px;
+$huge-font-size:    32px;
+$header-1-size:     30px;
+$header-2-size:     20px;
+$header-3-size:     18px;
+
+// Colors
+$black: #415b76;
+$dark: #415b76;
+$white: #ffffff;
+
+$darkgrey: #474747;
+$grey: #575757;
+$midgrey: #f2f2f2;
+$lightgrey: #f2f2f2;
+
+$lighttext: #c6cbd2;
+
+$red: #e70000;
+
+$lightblue: #93abc4;
+$blue: #415b76;
+$darkblue: #1d3f61;
+
+
+$lightgreen: #80ddc6;
+$green: #00ba8b;
+$darkgreen: #00a178;
+$lightpink: #eea1c9;
+$pink: #e83895;
+$darkpink: #b61d6e;
+
+$highlight: #f37936;
+
+$link-color: $blue;
+$link-color-hover: lighten( $blue, 20%);
+
+// Images sprite
+$sprite-bg: url('../images/sprite.png');
+$sprite-bg-size: 1000 1000;

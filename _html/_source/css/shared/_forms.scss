@@ -1,0 +1,148 @@
+%standard-input {
+    border-radius: 0;
+    padding: rhythm(1) 15px;
+    border: 0;
+    background-color: $lightgrey;
+    outline: none;
+    @include change-font-size( 14px );
+    @include transition(background-color 0.2s);
+
+    &:focus {
+        background-color: #f3f3f3;
+    }
+}
+
+%selectbox {
+    @extend %standard-input;
+    @extend %small-font-size;
+    @include retina-image( '../images/select-arrow', 24px 10px );
+    background: {
+        repeat: no-repeat;
+        position: right center;
+    }
+
+    padding-right: 34px;
+    line-height: rhythm(1);
+    margin: {
+        top: rhythm(0.25);
+        bottom: rhythm(0.25);
+        left: 0;
+        right: 0;
+    }
+    width: auto;
+    cursor: pointer;
+    border-radius: 2px;
+
+    //disable webkit looks
+    -webkit-appearance: none;
+
+    //disable firefox looks
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: "";
+
+    //misc
+    -o-appearance: none;
+    appearance: none;
+
+    //our favorite browser
+    -ms-appearance: none;
+    &::-ms-expand {
+        display: none;
+    }
+
+    + label {
+        display: none;
+    }
+}
+
+%input-text {
+    @extend %standard-input;
+    line-height: rhythm(1);
+    height: rhythm(1);
+    display: block;
+    margin: {
+        top: rhythm(0.25);
+        bottom: rhythm(0.25);
+    }
+}
+
+input,
+textarea,
+select,
+button {
+	@extend %standard-input;
+}
+select {
+    @extend %selectbox;
+}
+input[type=submit],
+label {
+    cursor: pointer;
+}
+
+
+.gform_body {
+	margin-bottom: rhythm(2);
+
+	.gfield {
+		margin-bottom: rhythm(1);
+		@include clearfix;
+
+		label {
+            display: block;
+		}
+		input, select, textarea {
+			width: 100%;
+		}
+		select {
+			@extend %selectbox;
+		}
+
+        .gfield_radio {
+            li {
+                display: inline;
+
+                input {
+                    margin: 0 5px 0 0;
+                    padding: 0;
+                    float: left;
+                    width: auto;
+                    background: none;
+                    box-shadow: none;
+                    border: 0;
+                }
+
+                label {
+                    vertical-align: baseline;
+                    width: auto;
+                    float: left;
+                    margin-right: 30px;
+                }
+            }
+        }
+
+        .gfield_description {
+            margin-left: 40%;
+            @include change-font-size( 16px );
+        }
+
+        &.gfield_error {
+            .validation_message {
+                color: $red;
+            }
+
+            input[type=text], textarea {
+                border-color: $red;
+            }
+        }
+	}
+}
+
+.gform_footer {
+	@include clearfix;
+}
+
+.validation_error {
+    color: $red;
+}

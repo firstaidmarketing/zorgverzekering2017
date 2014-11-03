@@ -1,0 +1,22 @@
+.sidebar {
+	h4 {
+		@include change-font-size(22px);
+		margin-bottom: rhythm(1);
+	}
+
+	&-home {
+		@include clearfix;
+
+		.widget {
+			@include span-columns( 6 );
+			@include omega( 2n );
+			@extend %bg-box;
+			padding: rhythm(1);
+
+			@include media( $mobile ) {
+				@include span-columns( 4 );
+				@include omega-reset( 2n );
+			}
+		}
+	}
+}

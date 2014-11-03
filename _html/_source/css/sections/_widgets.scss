@@ -1,0 +1,45 @@
+.widget {
+	margin-bottom: rhythm(2);
+
+	ul {
+		margin-bottom: rhythm(1);
+	}
+
+	&-recent-news,
+	&-recent-reviews {
+		li {
+			margin-bottom: rhythm(1);
+
+			.side {
+				float: left;
+				width: 20%;
+				text-align: center;
+				@include change-font-size(24px);
+				font-weight: bold;
+
+				span {
+					display: block;
+				}
+				.month {
+					margin-top: rhythm(-1);
+					@include change-font-size(18px);
+				}
+			}
+			.text {
+				margin-left: 20%;
+				padding-left: rhythm(1);
+				border-left: 1px solid #ececec;
+
+				h3 {
+					margin: 0;
+					@include change-font-size(16px);
+				}
+			}
+		}
+
+		.readall {
+			margin-left: 20%;
+			padding-left: rhythm(1);
+		}
+	}
+}

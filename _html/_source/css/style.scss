@@ -1,0 +1,33 @@
+/*
+Theme Name: Keuze.nl
+Description: WordPress theme for www.keuze.nl
+Author: Uprise <arjan@uprise.nl>
+Author URI: http://www.uprise.nl
+Version: 1.0
+*/
+
+@import "globals/settings";
+@import "lib/bourbon/bourbon";
+@import "lib/neat/neat";
+@import "lib/vertical-rhythm";
+@import "globals/mixins";
+@import "shared/reset";
+
+@import "plugins/chosen";
+@import "plugins/magnify";
+@import "plugins/responsive-tabs";
+@import "plugins/superfish";
+
+@import "shared/type";
+@import "shared/layout-helpers";
+@import "shared/header";
+@import "shared/footer";
+@import "shared/navigation";
+@import "shared/buttons";
+@import "shared/forms";
+@import "shared/tables";
+
+@import "sections/home";
+@import "sections/content";
+@import "sections/sidebar";
+@import "sections/widgets";

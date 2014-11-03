@@ -1,0 +1,46 @@
+/*--- superfish essential styles ---*/
+.sf-menu, 
+.sf-menu li ul{ margin: 0; padding: 0; list-style: none; }
+.sf-menu li, 
+.sf-menu li li{ position: relative; }
+.sf-menu li ul{ position: absolute; display: none; top: 100%; left: 0; z-index: 99; }
+/* .sf-menu li:hover > ul, */
+.sf-menu li li:hover > ul,
+.sf-menu li.sfHover > ul,
+.sf-menu li li.sfHover > ul { display: block; }
+.sf-menu li a { display: block; position: relative; }
+.sf-menu li ul ul { top: 0; left: 100%; margin-left: 1px; }
+
+/*--- goodlayers skin top level---*/
+.sf-menu > li{ float: left; }
+.sf-menu > li.current-menu-item > a,
+.sf-menu > li.current-menu-ancestor > a{ }
+.sf-menu > li > a{ padding: 10px 5px; text-decoration: none; zoom: 1; /*- for IE7 -*/ }
+
+
+/*- no submenu indicator on top level -*/
+.sf-menu > li > a.sf-with-ul{ padding-right: 25px; *padding-right: 10px; } 
+.sf-menu i{ margin-right: 7px; }
+.sf-menu li li i{ margin-right: 10px; }
+
+/*--- goodlayers skin normal menu ---*/
+.sf-menu > li ul { text-transform: none; letter-spacing: 0px; min-width: 190px; *width: 12em; /*- no auto width for IE7 -*/ }
+.sf-menu > li li { white-space: nowrap; *white-space: normal; /*- for IE7 -*/ }
+.sf-menu > li li a{ padding: 10px 15px; border-top-width: 1px; border-top-style: solid; zoom: 1; }
+.sf-menu > li li:first-child > a{ border-top-width: 0px; }
+.sf-menu > li li > a.sf-with-ul { padding-right: 30px; }
+.sf-menu > li li > a.sf-with-ul:after { content: '\f105'; top: 50%; margin-top: -10px; 
+	right: 10px; border-color: transparent; }
+
+
+/*--- top menu ---*/
+.gdlr-top-menu.sf-menu li a.sf-with-ul:after{ display: none; }
+.gdlr-top-menu.sf-menu > li i{ margin-right: 9px; font-size: 14px; }
+.gdlr-top-menu.sf-menu > li > a { padding: 8px 15px 8px 16px; margin-right: 0px; 
+	line-height: 18px; border-style: solid; border-left-width: 1px; }
+.gdlr-top-menu.sf-menu > li:last-child > a { border-right-width: 1px; }
+.gdlr-top-menu.sf-menu > .gdlr-mega-menu .sf-mega { left: auto; right: auto; border-top: 0px; 	-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.25); \-webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+	margin: 2px 0px 0px; padding: 20px 20px; white-space: nowrap; min-width: 120px;
+	*white-space: normal; *min-width: 250px; /*- for IE7 -*/ }
+.gdlr-top-menu.sf-menu > li .sub-menu-item{ line-height: 1; margin-top: 15px; }
+.gdlr-top-menu.sf-menu > li .sub-menu-item:first-child{ margin-top: 0px; }

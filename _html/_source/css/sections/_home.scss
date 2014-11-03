@@ -1,0 +1,228 @@
+.featured {
+	@include clearfix;
+	padding: rhythm(2) 0;
+	background: {
+		image: url('../images/bg-home.jpg');
+		repeat: no-repeat;
+		position: center;
+		size: cover;
+	}
+}
+
+#form-tabs {
+	.nav {
+		@include span-columns( 3, block-collapse );
+
+		@include media( $tablet ) {
+			display: none;
+		}
+
+		li {
+			display: block;
+
+			a {
+				display: block;
+				background: $green;
+				color: $white;
+				padding: rhythm(0.5) 40px;
+				@include change-font-size(17px);
+				@include border-left-radius( 4px );
+				@include transition ( none );
+				-webkit-box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.7), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.19);
+				-moz-box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.7), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.19);
+				box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.7), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.19);
+			}
+
+			&:last-child a {
+				-webkit-box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.7);
+				-moz-box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.7);
+				box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.7);
+			}
+
+			&.r-tabs-state-active a,
+			a:hover {
+				background-color: $white;
+				color: $blue;
+				box-shadow: none;
+			}
+		}
+	}
+
+	.panels {
+		@include span-columns( 9, block-collapse );
+		min-height: 500px;
+		background: $white;
+		@include border-bottom-radius( 4px );
+
+		@include media( $tablet ) {
+			float: none;
+			width: 100%;
+
+			&:last-child {
+				width: 100%;				
+			}
+		}
+
+		.r-tabs-accordion-title {
+			a {
+				display: block;
+				background: $green;
+				color: $white;
+				padding: rhythm(0.5) 40px;
+				@include change-font-size(17px);
+				@include transition ( none );
+				-webkit-box-shadow: inset 0px -2px 0px 0px rgba(0, 0, 0, 0.19);
+				-moz-box-shadow: inset 0px -2px 0px 0px rgba(0, 0, 0, 0.19);
+				box-shadow: inset 0px -2px 0px 0px rgba(0, 0, 0, 0.19);
+			}
+		}
+
+		.tab {
+			@include clearfix;
+			padding: rhythm(1) rhythm(2);
+
+			h2 {
+				@extend %header-1-size;
+			}
+
+			form {
+				@include span-columns( 5 of 9 );
+				border-right: 1px solid #d5d5d5;
+			}
+
+			.text {
+				@include span-columns( 4 of 9);
+			}
+		}
+	}
+}
+
+.home-entries {
+	.entry {
+		@include span-columns( 3 );
+		@include omega( 4n );
+		margin-bottom: rhythm(1);
+		padding: rhythm(1);
+		text-align: center;
+		
+		@extend %bg-box;
+
+		@include media( $tablet ) {
+			@include span-columns( 4 );
+			@include omega-reset( 4n );
+			@include omega( 2n );
+		}
+		@include media( $mobile ) {
+			@include span-columns( 4 );
+			@include omega-reset( 2n );
+		}
+
+		.icon {
+			display: inline-block;
+			width: 60px;
+			height: 55px;
+			@include sprite( 0 -290px );
+
+			&-auto {
+				width: 58px;
+				background-position: 0 -290px;
+			}
+			&-zorg {
+				width: 56px;
+				background-position: -300px -290px;
+			}
+			&-reis {
+				width: 51px;
+				background-position: -600px -290px;
+			}
+			&-inboedel {
+				width: 51px;
+				background-position: -900px -290px;
+			}
+			&-recht {
+				width: 58px;
+				background-position: 0 -480px;
+			}
+			&-uitvaart {
+				width: 37px;
+				background-position: -300px -475px;
+			}
+			&-energie {
+				width: 26px;
+				background-position: -600px -480px;
+			}
+			&-mobiel {
+				width: 36px;
+				background-position: -900px -480px;
+			}
+
+		}
+
+		h3 {
+			margin: 0;
+			@include change-font-size(22px);
+			font-weight: normal;
+		}
+	}
+}
+
+.why-keuze {
+	h2 {
+		text-align: center;
+		@extend %header-1-size;
+		margin-bottom: rhythm(1);
+	}
+	.usps {
+		padding-top: rhythm(2);
+		color: $white;
+		background: $blue;
+		text-align: center;
+		position: relative;
+		margin-bottom: 121px;
+
+		li {
+			position: relative;
+			display: inline-block;
+			padding-left: 30px;
+			margin-right: 30px;
+			font-weight: bold;
+			@include change-font-size(22px);
+
+			&:before {
+				content: "\f00c";
+				font-family: FontAwesome;
+				margin-right: 10px;
+			}
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -121px;
+			height: 121px;
+			width: 100%;
+			background: {
+				image: url('../images/bg-why-keuze.png');
+				repeat: no-repeat;
+				position: center top;
+				color: $lightgrey;
+				size: 100% 100%;	
+			}
+		}
+	}
+}
+
+.sidebar-home {
+	margin-bottom: rhythm(2);
+	
+	.content {
+		clear: both;
+		@extend %bg-box;
+
+		h3 {
+			@include change-font-size(15px);
+			margin: 0;
+		}
+	}
+}

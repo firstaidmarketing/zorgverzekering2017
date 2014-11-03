@@ -1,0 +1,48 @@
+#footer {
+	@include clearfix;
+	padding: rhythm(2) 0 rhythm(1) 0;
+	border-top: 1px solid #cfcece;
+
+	.left,
+	.right {
+		float: left;
+		width: 50%;
+
+		@include media( $tablet ) {
+			float: none;
+			width: 100%;
+		}
+	}
+
+	.right {
+		@include media( $large ) {
+			padding-left: 60px;
+		}
+		@include media( $tablet ) {
+			clear: both;
+		}	
+	}
+	
+
+	.logo {
+		margin-bottom: rhythm(1);
+	}
+
+	h4 {
+		margin-bottom: rhythm(1);
+		font-weight: bold;
+	}
+
+	.column {
+		@include span-columns( 3 );
+		margin-bottom: rhythm(1);
+
+		@include media( $mobile ) {
+			@include span-columns( 4 );
+		}
+
+		h4 {
+			margin-bottom: 0;
+		}
+	}
+}
