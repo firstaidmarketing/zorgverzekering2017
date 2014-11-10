@@ -28,14 +28,10 @@
 				@include change-font-size(17px);
 				@include border-left-radius( 4px );
 				@include transition ( none );
-				-webkit-box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.7), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.19);
-				-moz-box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.7), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.19);
 				box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.7), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.19);
 			}
 
 			&:last-child a {
-				-webkit-box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.7);
-				-moz-box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.7);
 				box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.7);
 			}
 
@@ -71,8 +67,6 @@
 				padding: rhythm(0.5) 40px;
 				@include change-font-size(17px);
 				@include transition ( none );
-				-webkit-box-shadow: inset 0px -2px 0px 0px rgba(0, 0, 0, 0.19);
-				-moz-box-shadow: inset 0px -2px 0px 0px rgba(0, 0, 0, 0.19);
 				box-shadow: inset 0px -2px 0px 0px rgba(0, 0, 0, 0.19);
 			}
 		}
@@ -85,13 +79,89 @@
 				@extend %header-1-size;
 			}
 
-			form {
-				@include span-columns( 5 of 9 );
+			.form {
+				@include span-columns( 6 of 9 );
+				padding-right: rhythm(1);
 				border-right: 1px solid #d5d5d5;
+
+				@include media( $tablet-portrait ) {
+					@include span-columns( 8 );
+					padding-bottom: rhythm(1);
+					margin-bottom: rhythm(1);
+					border-right: 0;
+					border-bottom: 1px solid #d5d5d5;
+				}
+
+				label,
+				input[type=text],
+				input[type=number],
+				input[type=date],
+				select {
+					@include omega( 2n );
+				}
+				label {
+					@include span-columns( 2 of 5 );
+					@include change-font-size(18px);
+				}
+				input[type=text],
+				input[type=number],
+				input[type=date],
+				select {
+					@include span-columns( 3 of 5 );
+				}
+
+				.description {
+					clear: both;
+					@include span-columns( 3 of 5 );
+					@include shift( 2 );
+
+					a {
+						text-decoration: underline;
+					}
+				}
+
+				.buttons {
+					@include span-columns( 3 of 5 );
+					@include shift( 2 );
+
+					.button {
+						background-color: $pink;
+
+						&:hover {
+							background-color: $darkpink;							
+						}
+					}
+				}
+
+				@include media( $mobile ) {
+					label,
+					input[type=text],
+					input[type=number],
+					input[type=date] {
+						@include omega-reset( 2n );
+						float: none;
+						clear: both;
+						display: block;
+						width: auto;
+					}
+
+					.description,
+					.buttons {
+						margin-left: 0;
+						float: none;
+						clear: both;
+						display: block;
+						width: auto;
+					}
+				}
 			}
 
 			.text {
-				@include span-columns( 4 of 9);
+				@include span-columns( 3 of 9);
+
+				@include media( $tablet-portrait ) {
+					@include span-columns( 8 );
+				}
 			}
 		}
 	}

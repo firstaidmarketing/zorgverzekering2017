@@ -19,13 +19,44 @@
 
 		    <div class="panels">
 			    <div class="tab" id="tab-auto">
-			    	<h2>Auto tab</h2>
-			    	<form action="" method="post">
-			    		<p>
-			    			<label for="auto-kenteken">Kenteken</label>
-			    			<input type="text" id="auto-kenteken" name="kenteken">
-			    		</p>
-			    	</form>
+			    	<h2>Autoverzekering vergelijken</h2>
+			    	<div class="form">
+				    	<form action="" method="post">
+				    		<p>
+				    			<label for="auto-kenteken">Je kenteken</label>
+				    			<input type="text" id="auto-kenteken" name="kenteken" class="kenteken">
+				    			<span class="description"><a href="#">Ik weet mijn kenteken niet</a></span>
+				    		</p>
+				    		<p>
+				    			<label for="auto-postcode">Je postcode</label>
+				    			<input type="text" id="auto-postcode" name="postcode" class="postcode">
+				    		</p>
+				    		<p>
+				    			<label for="auto-geboortedatum">Je geboortedatum</label>
+				    			<input type="text" id="auto-geboortedatum" name="geboortedatum" class="geboortedatum">
+				    		</p>
+				    		<p>
+				    			<label for="auto-schadevrij">Schadevrije jaren</label>
+				    			<select id="auto-schadevrij" name="schadevrij" class="schadevrij">
+				    				<option value="0">-2</option>
+				    				<option value="0">-1</option>
+				    				<option value="0" selected="selected">0</option>
+				    				<option value="0">1</option>
+				    				<option value="0">2</option>
+				    				<option value="0">3</option>
+				    				<option value="0">4</option>
+				    				<option value="0">5</option>
+				    				<option value="0">6</option>
+				    				<option value="0">7</option>
+				    				<option value="0">8</option>
+				    				<option value="0">9</option>
+				    			</select>
+				    		</p>
+				    		<p class="buttons">
+				    			<input type="submit" class="button" value="Direct vergelijken">
+				    		</p>
+				    	</form>
+				    </div>
 			    	<div class="text">
 			    		<p>
 			    			<strong>Een titeltje</strong><br>
@@ -35,9 +66,11 @@
 			    </div>
 			    <div class="tab" id="tab-zorg">
 			    	<h2>zorg tab</h2>
-			    	<form action="" method="post">
+			    	<div class="form">
+			    		<form action="" method="post">
 
-			    	</form>
+			    		</form>
+			    	</div>
 			    	<div class="text">
 			    		<p>
 			    			<strong>Een titeltje</strong><br>
@@ -47,9 +80,11 @@
 			    </div>
 			    <div class="tab" id="tab-reis">
 			    	<h2>reis tab</h2>
-			    	<form action="" method="post">
+			    	<div class="form">
+			    		<form action="" method="post">
 
-			    	</form>
+			    		</form>
+			    	</div>
 			    	<div class="text">
 			    		<p>
 			    			<strong>Een titeltje</strong><br>
@@ -59,9 +94,11 @@
 			    </div>
 			    <div class="tab" id="tab-inboedel">
 			    	<h2>inboedel tab</h2>
-			    	<form action="" method="post">
+			    	<div class="form">
+			    		<form action="" method="post">
 
-			    	</form>
+			    		</form>
+			    	</div>
 			    	<div class="text">
 			    		<p>
 			    			<strong>Een titeltje</strong><br>
@@ -71,9 +108,11 @@
 			    </div>
 			    <div class="tab" id="tab-recht">
 			    	<h2>recht tab</h2>
-			    	<form action="" method="post">
+			    	<div class="form">
+			    		<form action="" method="post">
 
-			    	</form>
+			    		</form>
+			    	</div>
 			    	<div class="text">
 			    		<p>
 			    			<strong>Een titeltje</strong><br>
@@ -83,9 +122,11 @@
 			    </div>
 			    <div class="tab" id="tab-uitvaart">
 			    	<h2>uitvaart tab</h2>
-			    	<form action="" method="post">
+			    	<div class="form">
+			    		<form action="" method="post">
 
-			    	</form>
+			    		</form>
+			    	</div>
 			    	<div class="text">
 			    		<p>
 			    			<strong>Een titeltje</strong><br>
@@ -95,9 +136,11 @@
 			    </div>
 			    <div class="tab" id="tab-energie">
 			    	<h2>energie tab</h2>
-			    	<form action="" method="post">
+			    	<div class="form">
+			    		<form action="" method="post">
 
-			    	</form>
+			    		</form>
+			    	</div>
 			    	<div class="text">
 			    		<p>
 			    			<strong>Een titeltje</strong><br>
@@ -107,9 +150,11 @@
 			    </div>
 			    <div class="tab" id="tab-mobiel">
 			    	<h2>mobiel tab</h2>
-			    	<form action="" method="post">
+			    	<div class="form">
+			    		<form action="" method="post">
 
-			    	</form>
+			    		</form>
+			    	</div>
 			    	<div class="text">
 			    		<p>
 			    			<strong>Een titeltje</strong><br>

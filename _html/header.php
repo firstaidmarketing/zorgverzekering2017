@@ -48,11 +48,11 @@
     </div>
     <div class="header-nav">
         <section class="outer-wrapper">
-            <div class="logo">
-                <a href="#"><img src="/assets/images/logo.png" alt="Keuze.nl logo"></a>
-            </div>
-
             <nav class="nav-main">
+                <div class="logo">
+                    <a href="#"><img src="/assets/images/logo.png" alt="Keuze.nl logo"></a>
+                </div>
+                
                 <ul class="sf-menu">
                     <li class="home"><a href="#">Home</a></li>
                     <li class="mobile"><a href="javascript:;" class="menu-btn">

@@ -21,17 +21,23 @@ body {
 }
 
 .outer-wrapper {
-	@include outer-container;
 	position: relative;
+	padding-left: rhythm(1);
+	padding-right: rhythm(1);
 
-	@include media( $large ) {
-		max-width: $outer-max-width;
-	}
-
-	@include media( $desktop ) {
+	@include media( $tablet ) {
 		padding-left: 10px;
-		padding-right: 10px;
+		padding-right: 10px;		
 	}
+}
+
+%full-wrapper {
+	@include outer-container;
+	width: auto;
+	max-width: $outer-max-width;
+	margin-left: 0;
+	margin-right: 0;
+	padding: rhythm(1);
 }
 
 .section {
@@ -47,8 +53,6 @@ body {
 	padding: rhythm(1);
 	background: $white;
 	border-radius: 4px;
-	-webkit-box-shadow: inset 0px -3px 0px 0px rgba(0, 0, 0, 0.19);
-	-moz-box-shadow: inset 0px -3px 0px 0px rgba(0, 0, 0, 0.19);
 	box-shadow: inset 0px -3px 0px 0px rgba(0, 0, 0, 0.19);
 }
 

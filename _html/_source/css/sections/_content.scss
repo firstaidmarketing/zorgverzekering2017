@@ -1,74 +1,18 @@
-.content{ 
-	h2 {
-		@extend %huge-font-size;
-		font-weight: bold;
-		color: $grey;
-		margin-bottom: rhythm(1);
-	}
-
-	.metainfo {
-		margin-bottom: rhythm(1);
-		color: $lighttext;
-		@include change-font-size(12px);
-		text-transform: uppercase;
-		font-weight: bold;
-
-		a {
-			color: $lighttext;
-		}
-
-		.info {
-			margin-right: 20px;
-
-			i {
-				margin-right: 5px;
-			}
-		}
-	}
-
-	article {
-		margin-bottom: rhythm(2);
-	}
-
-	.share {
-		@include clearfix;
-		margin-bottom: rhythm(2);
-		padding: rhythm(1);
-		background: $midgrey;
-
-		.label {
-			float: left;
-			font-weight: bold;
-			color: $black;
-			margin-right: 20px;
-		}
-
-		.share-item {
-			float: left;
-			margin-right: 10px;
-		}
-	}
+.breadcrumbs {
+	padding: rhythm(1) rhythm(1) rhythm(0.5) rhythm(1);
+	box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.19);
+	margin-bottom: rhythm(1);
 }
 
-.content-overview {
+.main-content {
+	background: $midgrey;
+	padding: rhythm(1);
 
-	article {
-		@include clearfix;
+	.inner {
+		@extend %full-wrapper;
+	}
 
-		.image {
-			@include span-columns( 4 );
-		}
-		.text {
-			@include span-columns( 8 );
-
-			&.full-text {
-				@include span-columns( 12 );
-			}
-
-			h2 {
-				@extend %bigger-font-size;
-				margin-bottom: rhythm(0.5);
-			}
-		}
+	article.post {
+		@extend %bg-box;
 	}
 }

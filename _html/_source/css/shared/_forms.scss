@@ -1,14 +1,15 @@
 %standard-input {
     border-radius: 0;
-    padding: rhythm(1) 15px;
-    border: 0;
-    background-color: $lightgrey;
+    padding: rhythm(0.5) 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     outline: none;
-    @include change-font-size( 14px );
-    @include transition(background-color 0.2s);
+    color: $black;
+    @include change-font-size( 15px );
+    @include transition(border-color 0.2s);
 
     &:focus {
-        background-color: #f3f3f3;
+        border-color: #bbb;
     }
 }
 
@@ -19,34 +20,24 @@
     background: {
         repeat: no-repeat;
         position: right center;
+        color: $white;
     }
 
     padding-right: 34px;
     line-height: rhythm(1);
-    margin: {
-        top: rhythm(0.25);
-        bottom: rhythm(0.25);
-        left: 0;
-        right: 0;
-    }
+    margin: 0;
     width: auto;
     cursor: pointer;
-    border-radius: 2px;
+    border-radius: 4px;
 
-    //disable webkit looks
     -webkit-appearance: none;
-
-    //disable firefox looks
     -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
     text-indent: 0.01px;
     text-overflow: "";
-
-    //misc
-    -o-appearance: none;
-    appearance: none;
-
-    //our favorite browser
-    -ms-appearance: none;
+    
     &::-ms-expand {
         display: none;
     }
@@ -56,15 +47,22 @@
     }
 }
 
+input.kenteken {
+    @extend %standard-input;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    @include change-font-size(22px);
+    height: rhythm(2);
+    font-weight: bold;
+    border-left: 25px solid $blue;
+    background-color: #f3bd01;
+}
+
 %input-text {
     @extend %standard-input;
     line-height: rhythm(1);
     height: rhythm(1);
-    display: block;
-    margin: {
-        top: rhythm(0.25);
-        bottom: rhythm(0.25);
-    }
+    display: inline-block;
 }
 
 input,

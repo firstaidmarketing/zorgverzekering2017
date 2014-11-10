@@ -47,6 +47,15 @@ jQuery(document).ready(function($) {
         startCollapsed: false,
         animation: _window.width() < keuze.settings.tabletWidth ? 'slide' : 'none'
     });
+    $('#overview-tabs').responsiveTabs({
+        startCollapsed: false,
+        collapse: false,
+        animation: 'none'
+    }).find('.nav-tab').appendTo( $('#overview-tabs .top .right') );
+
+    $('input.kenteken').blur( function() {
+        $(this).val( keuze.formatKenteken( $(this).val() ) );
+    })
 
 });
 
@@ -72,6 +81,50 @@ jQuery(document).ready(function($) {
             else {
                 _searchForm.show().insertBefore( $('.header-top .contact') );
             }
+        }
+
+        function formatKenteken( Licenseplate ) {
+            Licenseplate = Licenseplate.replace( /\-/g, '' ).toUpperCase();
+            var Sidecode = getSideCodekenten(Licenseplate);
+
+            if( Sidecode <= 6 )
+                return Licenseplate.substr(0, 2) + '-' + Licenseplate.substr(2, 2) + '-' + Licenseplate.substr(4, 2);
+            if( Sidecode == 7 || Sidecode == 9 )
+                return Licenseplate.substr(0, 2) + '-' + Licenseplate.substr(2, 3) + '-' + Licenseplate.substr(5, 1);
+            if( Sidecode == 8 || Sidecode == 10 )
+                return Licenseplate.substr(0, 1) + '-' + Licenseplate.substr(1, 3) + '-' + Licenseplate.substr(4, 2);
+
+            return Licenseplate;
+        }
+
+        function getSideCodekenten( Licenseplate ) {
+            var arrSC = new Array;
+            var scUitz = '';
+
+            Licenseplate = Licenseplate.replace('-', '').toUpperCase();
+
+            arrSC[0] = /^[a-zA-Z]{2}[\d]{2}[\d]{2}$/;           //  1   XX-99-99
+            arrSC[1] = /^[\d]{2}[\d]{2}[a-zA-Z]{2}$/;           //  2   99-99-XX
+            arrSC[2] = /^[\d]{2}[a-zA-Z]{2}[\d]{2}$/;           //  3   99-XX-99
+            arrSC[3] = /^[a-zA-Z]{2}[\d]{2}[a-zA-Z]{2}$/;       //  4   XX-99-XX
+            arrSC[4] = /^[a-zA-Z]{2}[a-zA-Z]{2}[\d]{2}$/;       //  5   XX-XX-99
+            arrSC[5] = /^[\d]{2}[a-zA-Z]{2}[a-zA-Z]{2}$/;       //  6   99-XX-XX
+            arrSC[6] = /^[\d]{2}[a-zA-Z]{3}[\d]{1}$/;           //  7   99-XXX-9
+            arrSC[7] = /^[\d]{1}[a-zA-Z]{3}[\d]{2}$/;           //  8   9-XXX-99
+            arrSC[8] = /^[a-zA-Z]{2}[\d]{3}[a-zA-Z]{1}$/;       //  9   XX-999-X
+            arrSC[9] = /^[a-zA-Z]{1}[\d]{3}[a-zA-Z]{2}$/;       //  10  X-999-XX
+
+            //except licenseplates for diplomats
+            scUitz = '^CD[ABFJNST][0-9]{1,3}$'; // for example: CDB1 of CDJ45
+
+            for( i=0; i<arrSC.length; i++ ) {
+                if (Licenseplate.match(arrSC[i]))
+                    return i+1;
+            }
+            if (Licenseplate.match(scUitz))
+                return 'CD';
+
+            return false;
         }
 
         function checkForTouch() {
@@ -104,6 +157,8 @@ jQuery(document).ready(function($) {
         return {
             settings : settings,
             handleResponiveActions : handleResponiveActions,
+            formatKenteken : formatKenteken,
+            getSideCodekenten : getSideCodekenten,
             checkForTouch : checkForTouch,
             handleBodyClasses  : handleBodyClasses,
         }

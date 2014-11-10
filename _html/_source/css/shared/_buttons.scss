@@ -1,4 +1,4 @@
-@mixin btn( $width: auto, $padding: 0 30px ) {
+@mixin btn( $bg-color: $green, $width: auto, $padding: 0 30px ) {
 	display: inline-block;
 	width: $width;
 	padding: $padding;
@@ -10,11 +10,8 @@
 	text-decoration: none;
 
 	border: 0;
-	background: $green;
+	background: $bg-color;
 	border-radius: 4px;
-	//border-bottom: 3px solid $darkgreen;
-	-webkit-box-shadow: inset 0px -3px 0px 0px rgba(0, 0, 0, 0.19);
-	-moz-box-shadow: inset 0px -3px 0px 0px rgba(0, 0, 0, 0.19);
 	box-shadow: inset 0px -3px 0px 0px rgba(0, 0, 0, 0.19);
 	@include transition ( background 0.3s ease-in-out );
 

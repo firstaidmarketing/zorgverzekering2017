@@ -4,9 +4,7 @@
 	top: 0;
 	z-index: 100;
 	background: $white;
-	box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.3 );
-	-moz-box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.3 );
-	-webkit-box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.3 );
+	box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.3 );
 }
 
 .header-top {
@@ -104,8 +102,6 @@
 		border-radius: 5px;
 		height: auto;
 		padding: 5px 10px 5px 40px;
-		-webkit-box-shadow: inset 3px 0px 4px 0px rgba(50, 50, 50, 0.2);
-		-moz-box-shadow:    inset 3px 0px 4px 0px rgba(50, 50, 50, 0.2);
 		box-shadow:         inset 3px 0px 4px 0px rgba(50, 50, 50, 0.2);
 		color: $lightgrey;
 
@@ -137,29 +133,35 @@
 			repeat: no-repeat;
 			position: left -124px;
 		}
-
-		.nav-main {
-			@include outer-container;
-		}
-	}
-
-	.logo {
-		position: absolute;
-		left: 0;
-		padding-top: rhythm(1);
-
-		@include media( $desktop ) {
-			position: static;
-			float: left;
-			margin-right: 20px;
-		}
 	}
 
 	.nav-main {
-		@include media( $desktop ) {
-			position: static;
+		float: left;
+		
+		@include media( $mobile ) {
+			float: none;
+		}
+
+		.logo {
 			float: left;
-		}	
+			margin-right: 18px;
+			padding-top: rhythm(1);
+
+			@include media( $mobile ) {
+				margin-right: 0;
+				padding-right: 20px;
+				width: 40%;
+
+				img {
+					max-width: 100%;
+					height: auto;
+				}
+			}
+		}
+
+		.sf-menu {
+			float: left;
+		}
 	}
 
 	.searchform {
@@ -174,17 +176,13 @@
 	}
 
 	.trust {
-		position: absolute;
-		right: 0;
-		top: 0;
+		float: right;
 		padding: rhythm(1) 0 0 20px;
 		height: rhythm(3);
 		text-align: right;
 		border-left: 1px solid #ececec;
 
-		@include media( $desktop ) {
-			position: static;
-			float: right;
+		@include media( $desktop ) {			
 			border-left: 0;
 			padding-left: 0;
 		}

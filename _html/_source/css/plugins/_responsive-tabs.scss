@@ -23,11 +23,13 @@
 
 /* Accordion responsive breakpoint */
 @include media( $tablet ) {
-    .r-tabs .r-tabs-nav {
-        display: none;
-    }
+    #form-tabs {
+        .r-tabs .r-tabs-nav {
+            display: none;
+        }
 
-    .r-tabs .r-tabs-accordion-title {
-        display: block;
+        .r-tabs .r-tabs-accordion-title {
+            display: block;
+        }
     }
 }
