@@ -59,7 +59,7 @@ module.exports = function(grunt){
 				files: [{
 					expand: true,
 					src: ['assets/**'],
-					dest: '../www/wp-content/themes/keuze/',
+					dest: '../webroot/wp-content/themes/keuze/',
 				}]
 			}
 		},

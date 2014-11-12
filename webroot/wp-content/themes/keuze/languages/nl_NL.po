@@ -1,0 +1,254 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Keuze.nl\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-11 12:20+0100\n"
+"PO-Revision-Date: 2014-11-11 12:20+0100\n"
+"Last-Translator: Arjan Snaterse <arjan@uprise.nl>\n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Generator: Poedit 1.6.10\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:11
+msgid "Page not found (404 error)"
+msgstr "Deze pagina is niet gevonden (404 error)"
+
+#: 404.php:15
+msgid "Unfortunetaly this page doesn't exist"
+msgstr "Helaas, deze pagina bestaat niet"
+
+#: 404.php:17
+#, php-format
+msgid "Go back to the %shomepage%s."
+msgstr "Ga terug naar de %shomepage%s"
+
+#: header.php:64
+msgid "About us"
+msgstr "Over ons"
+
+#: header.php:65
+msgid "Coffee, tea and more"
+msgstr "Koffie, thee en meer"
+
+#: header.php:66
+msgid "Service"
+msgstr "Service"
+
+#: header.php:67
+msgid "Durability"
+msgstr "Duurzaam"
+
+#: header.php:68
+msgid "Coffee machines"
+msgstr "Koffiemachines"
+
+#: header.php:77
+msgid "Contact"
+msgstr "Contact"
+
+#: tpl-homepage.php:48
+msgid "Discover what Maas can do for your organization"
+msgstr "Ontdek wat Maas voor uw organisatie kan betekenen"
+
+#: tpl-homepage.php:74
+msgid "more information"
+msgstr "meer informatie"
+
+#: tpl-homepage.php:87 tpl-homepage.php:282
+msgid "Request a trial"
+msgstr "Proefplaatsing aanvragen"
+
+#: tpl-homepage.php:118
+msgid "Read the story"
+msgstr "Lees het verhaal"
+
+#: tpl-homepage.php:120
+msgid "of"
+msgstr "van"
+
+#: tpl-homepage.php:152 tpl-homepage.php:202 tpl-homepage.php:251
+msgid "Previous"
+msgstr "Vorige"
+
+#: tpl-homepage.php:153 tpl-homepage.php:203 tpl-homepage.php:252
+msgid "Next"
+msgstr "Volgende"
+
+#~ msgid "By"
+#~ msgstr "Door"
+
+#~ msgid "on"
+#~ msgstr "op"
+
+#, fuzzy
+#~ msgid "Nothing found"
+#~ msgstr "Niet gevonden"
+
+#, fuzzy
+#~ msgid "Choose city:"
+#~ msgstr "Kies je maat"
+
+#, fuzzy
+#~ msgid "E-mail"
+#~ msgstr "Email"
+
+#, fuzzy
+#~ msgid "Your comment"
+#~ msgstr "Je bestelling"
+
+#~ msgid "Checkout"
+#~ msgstr "Afrekenen"
+
+#~ msgid "View cart"
+#~ msgstr "Ga naar de winkelwagen"
+
+#~ msgid "Your cart is currently empty."
+#~ msgstr "Met een lege winkelwagen iets proberen af te rekenen. YEAULEAU!"
+
+#~ msgid "Return To Shop"
+#~ msgstr "Ga terug naar de homepage"
+
+#~ msgid "Shipping"
+#~ msgstr "Verzending"
+
+#~ msgid "Coupon"
+#~ msgstr "Coupon"
+
+#~ msgid "Coupon code"
+#~ msgstr "Coupon code"
+
+#~ msgid "Apply Coupon"
+#~ msgstr "Pas coupon code toe"
+
+#~ msgid "Subtotal"
+#~ msgstr "Subtotaal"
+
+#~ msgid "Remove"
+#~ msgstr "Verwijderen"
+
+#~ msgid "Total"
+#~ msgstr "Totaal"
+
+#~ msgid "Includes %s VAT (%s)"
+#~ msgstr "Inclusief %s BTW (%s)"
+
+#~ msgid " (taxes estimated for %s)"
+#~ msgstr "(BTW geschat voor %s)"
+
+#~ msgid "Item"
+#~ msgstr "Item"
+
+#~ msgid "Quantity"
+#~ msgstr "Hoeveelheid"
+
+#~ msgid "Price"
+#~ msgstr "Prijs"
+
+#~ msgid "Update Cart"
+#~ msgstr "Bijwerken"
+
+#~ msgid "No products in the cart."
+#~ msgstr "Er zijn geen producten in de winkelwagen"
+
+#~ msgid "Cart summary"
+#~ msgstr "Samenvatting"
+
+#~ msgid "Edit cart"
+#~ msgstr "Bewerk"
+
+#~ msgid "Shipping address"
+#~ msgstr "Verzendadres"
+
+#~ msgid "Billing address"
+#~ msgstr "Factuuradres"
+
+#~ msgid "Payment method"
+#~ msgstr "Betaalmethode"
+
+#~ msgid "Choose your method of payment"
+#~ msgstr "Kies je betaalmethode"
+
+#~ msgid ""
+#~ "I agree with the %sterms & conditions%s and I order with obligation to pay"
+#~ msgstr ""
+#~ "Ik ga akkoord met de %salgemene voorwaarden%s en ga hiermee een "
+#~ "betalingsverplichting aan."
+
+#~ msgid "Place order"
+#~ msgstr "Plaats bestelling"
+
+#~ msgid "Ship to a different address?"
+#~ msgstr "Verzenden naar een ander adres?"
+
+#~ msgid "Thank you for your order"
+#~ msgstr "Bedankt voor je bestelling"
+
+#~ msgid ""
+#~ "Are you happy with your shirt? Please let everybody know by sharing it"
+#~ msgstr ""
+#~ "Ben je blij met je shirt? Laat dat dan aan iedereen zien en deel YEAULEAU!"
+
+#~ msgid "View"
+#~ msgstr "Bekijk dit shirt"
+
+#~ msgid "Free shipping"
+#~ msgstr "Gratis verzending"
+
+#~ msgid "over"
+#~ msgstr "boven"
+
+#~ msgid "Choose a size"
+#~ msgstr "Kies je maat"
+
+#~ msgid "Add to cart"
+#~ msgstr "Bestel dit shirt"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid "In stock"
+#~ msgstr "Op voorraad"
+
+#~ msgid "Temporarily sold out"
+#~ msgstr "Tijdelijk uitverkocht"
+
+#~ msgid "Material"
+#~ msgstr "Materiaal"
+
+#~ msgid "Model"
+#~ msgstr "Model"
+
+#~ msgid "Description"
+#~ msgstr "Meer over dit shirt"
+
+#~ msgid "Order Details"
+#~ msgstr "Bestelgegevens"
+
+#~ msgid "Product"
+#~ msgstr "Product"
+
+#~ msgid "Download file%s"
+#~ msgstr "Download bestand%s"
+
+#~ msgid "Customer details"
+#~ msgstr "Klantgegevens"
+
+#~ msgid "Need help?"
+#~ msgstr "Hulp nodig?"
+
+#~ msgid "VAT (%s)"
+#~ msgstr "BTW (%s)"
+
+#~ msgid "Total (incl %s VAT)"
+#~ msgstr "Totaal (incl %s BTW)"
+
+#~ msgid "Buy"
+#~ msgstr "Bestel dit shirt"

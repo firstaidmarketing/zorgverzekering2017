@@ -1,0 +1,18 @@
+table {
+  width: 100%;
+  text-align: center;
+}
+
+table tr th {
+  padding: 13px 0px;
+  font-size: 16px;
+  font-weight: normal;
+  background-color: #62cdff;
+  color: #ffffff;
+}
+
+table tr td {
+  padding: 15px 0px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}

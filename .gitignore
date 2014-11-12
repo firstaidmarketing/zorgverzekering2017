@@ -1,0 +1,16 @@
+/_dump/
+/webroot/wp-config-local.php
+/webroot/content/upgrade/
+/webroot/content/uploads
+/webroot/content/cache/
+/webroot/content/w3tc-config/
+
+node_modules
+.sass-cache
+.DS_Store
+config.codekit
+npm-debug.log
+
+.vagrant
+/puphpet/files/dot/ssh/*
+!/puphpet/files/dot/ssh/insecure_private_key

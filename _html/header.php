@@ -88,4 +88,4 @@
 
 <div class="mobile-nav-holder"></div>
 
-<section class="content-holder">
+<div class="content-holder">

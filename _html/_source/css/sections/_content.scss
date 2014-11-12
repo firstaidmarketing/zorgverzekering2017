@@ -1,7 +1,14 @@
 .breadcrumbs {
 	padding: rhythm(1) rhythm(1) rhythm(0.5) rhythm(1);
 	box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.19);
-	margin-bottom: rhythm(1);
+	@include change-font-size(16px);
+
+	a {
+		text-decoration: underline;
+	}
+	.sep {
+		margin: 0 10px;
+	}
 }
 
 .main-content {

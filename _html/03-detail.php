@@ -6,9 +6,9 @@
 <div class="breadcrumbs" itemprop="breadcrumb">
     <span prefix="v: http://rdf.data-vocabulary.org/#">
         <span typeof="v:Breadcrumb"><a href="https://yoast.com" rel="v:url" property="v:title">Home</a></span>
-        <span class="sep">&rsaquo;</span>
+        <span class="sep">></span>
         <span typeof="v:Breadcrumb"><a href="https://yoast.com/wordpress/" rel="v:url" property="v:title">WordPress</a></span>
-        <span class="sep">&rsaquo;</span>
+        <span class="sep">></span>
         <span typeof="v:Breadcrumb"><span class="breadcrumb_last" property="v:title">WordPress Plugins</span></span>
     </span>
 </div>

@@ -3,6 +3,7 @@ var _body = $('body');
 var _header = $('#header');
 var _mobileNavHolder = $('.mobile-nav-holder');
 var _searchForm = $('.searchform');
+var _activeMenuItem = $('.nav-main .current-menu-item, .nav-main .current-menu-ancestor');
 
 jQuery(document).ready(function($) {
 
@@ -11,14 +12,18 @@ jQuery(document).ready(function($) {
     // Clone menu for mobile navigation
     $('.nav-main .sf-menu').clone().appendTo('.mobile-nav-holder').find('li.mobile').remove();
 
+    // Actions for window resizing
     _window.resize( function() {
         keuze.windowWidth = _window.width();
 
         keuze.handleBodyClasses();
 
         keuze.handleResponiveActions();
+
+        keuze.setMenuActiveItem();
     }).resize();
 
+    // Mobile navigation menu
     $('.nav-main .menu-btn').click( function(e) {
         e.preventDefault();
 
@@ -26,6 +31,7 @@ jQuery(document).ready(function($) {
         _mobileNavHolder.slideToggle();
     });
 
+    // Action for search button (on mobile)
     $('.nav-main .search-btn').click( function(e) {
         e.preventDefault();
 
@@ -37,12 +43,14 @@ jQuery(document).ready(function($) {
         });
     });
 
+    // Dropdown menu
     $('.nav-main > ul').superfish({
         delay: 500, 
         speed: 'fast', 
         animation: {opacity:'show', height:'show'}
     });
 
+    // Tabs 
     $('#form-tabs').responsiveTabs({
         startCollapsed: false,
         animation: _window.width() < keuze.settings.tabletWidth ? 'slide' : 'none'
@@ -53,9 +61,19 @@ jQuery(document).ready(function($) {
         animation: 'none'
     }).find('.nav-tab').appendTo( $('#overview-tabs .top .right') );
 
+    // Several form actions
     $('input.kenteken').blur( function() {
         $(this).val( keuze.formatKenteken( $(this).val() ) );
-    })
+    });
+
+    // Equal heights
+    keuze.setEqualHeights();
+
+
+    // Move header when logged in
+    if( $('#wpadminbar').length > 0 ) {
+        _header.css('top', $('#wpadminbar').height() + 'px' );
+    }
 
 });
 
@@ -83,6 +101,33 @@ jQuery(document).ready(function($) {
             }
         }
 
+        function setMenuActiveItem() {
+            var triangle = $('.triangle', _activeMenuItem);
+
+            var itemWidth = _activeMenuItem.width();
+            var newWidth = itemWidth / 1.414213562373095;
+            
+            triangle.css({
+                'border-width' : ( newWidth / 2 ) + 'px',
+                'margin-left': '-' + ( newWidth * 0.75 ) + 'px',
+                'bottom': '-' + newWidth + 'px'                
+            });
+        }
+
+        function setEqualHeights() {
+            var itemsPerRowHomepage = 4;
+            if( windowWidth <= keuze.settings.tabletWidth && windowWidth > keuze.settings.mobileWidth ) {
+                itemsPerRow = 2;
+            }
+            else if( windowWidth <= keuze.settings.mobileWidth ) {
+                itemsPerRow = 1;
+            }
+
+            $('.home-entries .entry:nth-child(' + itemsPerRow + 'n-' + ( itemsPerRow - 1 ) + ') ').each( function() {
+                $(this).closest('.entry').nextAll().andSelf().slice( 0, itemsPerRow ).find('.oneliner').equalHeights();
+            });
+        }
+        
         function formatKenteken( Licenseplate ) {
             Licenseplate = Licenseplate.replace( /\-/g, '' ).toUpperCase();
             var Sidecode = getSideCodekenten(Licenseplate);
@@ -157,6 +202,8 @@ jQuery(document).ready(function($) {
         return {
             settings : settings,
             handleResponiveActions : handleResponiveActions,
+            setMenuActiveItem : setMenuActiveItem,
+            setEqualHeights : setEqualHeights,
             formatKenteken : formatKenteken,
             getSideCodekenten : getSideCodekenten,
             checkForTouch : checkForTouch,
@@ -165,3 +212,55 @@ jQuery(document).ready(function($) {
 
     }();
 })(window);
+
+/*!
+ * Simple jQuery Equal Heights
+ *
+ * Copyright (c) 2013 Matt Banks
+ * Dual licensed under the MIT and GPL licenses.
+ * Uses the same license as jQuery, see:
+ * http://docs.jquery.com/License
+ *
+ * @version 1.5.1
+ */
+(function($) {
+
+    $.fn.equalHeights = function() {
+        var maxHeight = 0;
+        $this = $(this);
+
+        $this.css('height', 'auto');
+
+        $this.each( function() {
+            var height = $(this).actual('innerHeight');
+            if ( height > maxHeight ) { 
+                maxHeight = height;
+            }
+        });
+
+        return $this.css('height', maxHeight);
+    };
+
+    // auto-initialize plugin
+    $('[data-equal]').each(function(){
+        var $this = $(this),
+            target = $this.data('equal');
+        $this.find(target).equalHeights();
+    });
+
+})(jQuery);
+
+/*! Copyright 2012, Ben Lin (http://dreamerslab.com/)
+ * Licensed under the MIT License (LICENSE.txt).
+ *
+ * Version: 1.0.16
+ *
+ * Requires: jQuery >= 1.2.3
+ */
+(function(a){a.fn.addBack=a.fn.addBack||a.fn.andSelf;
+a.fn.extend({actual:function(b,l){if(!this[b]){throw'$.actual => The jQuery method "'+b+'" you called does not exist';}var f={absolute:false,clone:false,includeMargin:false};
+var i=a.extend(f,l);var e=this.eq(0);var h,j;if(i.clone===true){h=function(){var m="position: absolute !important; top: -1000 !important; ";e=e.clone().attr("style",m).appendTo("body");
+};j=function(){e.remove();};}else{var g=[];var d="";var c;h=function(){c=e.parents().addBack().filter(":hidden");d+="visibility: hidden !important; display: block !important; ";
+if(i.absolute===true){d+="position: absolute !important; ";}c.each(function(){var m=a(this);var n=m.attr("style");g.push(n);m.attr("style",n?n+";"+d:d);
+});};j=function(){c.each(function(m){var o=a(this);var n=g[m];if(n===undefined){o.removeAttr("style");}else{o.attr("style",n);}});};}h();var k=/(outer)/.test(b)?e[b](i.includeMargin):e[b]();
+j();return k;}});})(jQuery);

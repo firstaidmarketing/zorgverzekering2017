@@ -3,6 +3,7 @@ var _body = $('body');
 var _header = $('#header');
 var _mobileNavHolder = $('.mobile-nav-holder');
 var _searchForm = $('.searchform');
+var _activeMenuItem = $('.nav-main .current-menu-item, .nav-main .current-menu-ancestor');
 
 jQuery(document).ready(function($) {
 
@@ -17,6 +18,8 @@ jQuery(document).ready(function($) {
         keuze.handleBodyClasses();
 
         keuze.handleResponiveActions();
+
+        keuze.setMenuActiveItem();
     }).resize();
 
     $('.nav-main .menu-btn').click( function(e) {
@@ -55,7 +58,12 @@ jQuery(document).ready(function($) {
 
     $('input.kenteken').blur( function() {
         $(this).val( keuze.formatKenteken( $(this).val() ) );
-    })
+    });
+
+    if( $('#wpadminbar').length > 0 ) {
+        console.log( 'data' );
+        _body.css('margin-top', $('#wpadminbar').height() + 'px' );
+    }
 
 });
 
@@ -81,6 +89,19 @@ jQuery(document).ready(function($) {
             else {
                 _searchForm.show().insertBefore( $('.header-top .contact') );
             }
+        }
+
+        function setMenuActiveItem() {
+            var triangle = $('.triangle', _activeMenuItem);
+
+            var itemWidth = _activeMenuItem.width();
+            var newWidth = itemWidth / 1.414213562373095;
+            
+            triangle.css({
+                'border-width' : ( newWidth / 2 ) + 'px',
+                'margin-left': '-' + ( newWidth * 0.75 ) + 'px',
+                'bottom': '-' + newWidth + 'px'                
+            });
         }
 
         function formatKenteken( Licenseplate ) {
@@ -157,6 +178,7 @@ jQuery(document).ready(function($) {
         return {
             settings : settings,
             handleResponiveActions : handleResponiveActions,
+            setMenuActiveItem : setMenuActiveItem,
             formatKenteken : formatKenteken,
             getSideCodekenten : getSideCodekenten,
             checkForTouch : checkForTouch,
