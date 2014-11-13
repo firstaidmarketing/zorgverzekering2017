@@ -245,7 +245,7 @@
 					</div>
 					<div class="text">
 						<h3><a href="#">Complex en misleidend</a></h3>
-						<p>De goedkopere Verrichtingen Polissen van Stadholland en DSW Zorgverzekeringen vergoeden, net als voo.. <a href="#">lees meer</a></p>
+						<p>De goedkopere Verrichtingen Polissen van Stadholland en DSW Zorgverzekeringen vergoeden, net als voo.. <a href="#" class="readmore">lees meer</a></p>
 					</div>
 				</li>
 				<li>
@@ -255,7 +255,7 @@
 					</div>
 					<div class="text">
 						<h3><a href="#">Complex en misleidend</a></h3>
-						<p>De goedkopere Verrichtingen Polissen van Stadholland en DSW Zorgverzekeringen vergoeden, net als voo.. <a href="#">lees meer</a></p>
+						<p>De goedkopere Verrichtingen Polissen van Stadholland en DSW Zorgverzekeringen vergoeden, net als voo.. <a href="#" class="readmore">lees meer</a></p>
 					</div>
 				</li>
 				<li>
@@ -265,7 +265,7 @@
 					</div>
 					<div class="text">
 						<h3><a href="#">Complex en misleidend</a></h3>
-						<p>De goedkopere Verrichtingen Polissen van Stadholland en DSW Zorgverzekeringen vergoeden, net als voo.. <a href="#">lees meer</a></p>
+						<p>De goedkopere Verrichtingen Polissen van Stadholland en DSW Zorgverzekeringen vergoeden, net als voo.. <a href="#" class="readmore">lees meer</a></p>
 					</div>
 				</li>
 			</ul>

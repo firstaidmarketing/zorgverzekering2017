@@ -1,0 +1,29 @@
+body.wp-autoresize {
+	margin: 10px;
+
+	h1 {
+		@include change-font-size(30px);
+		margin-bottom: rhythm(1);
+	}
+	h2 {
+		@include change-font-size(20px);
+		margin-bottom: rhythm(1);
+	}
+	h3 {
+		@include change-font-size(15px);
+		margin-bottom: 0;
+		font-weight: bold;
+	}
+
+	ul, ol {
+		margin-left: 30px;
+	}
+	ul li,
+	ol ul li {
+		list-style: disc;
+	}
+	ol li,
+	ul ol li  {
+		list-style: decimal;
+	}
+}

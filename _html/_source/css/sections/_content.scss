@@ -23,3 +23,21 @@
 		@extend %bg-box;
 	}
 }
+
+article.post {
+	h2 {
+		line-height: 1.5em;
+	}
+
+	ul, ol {
+		margin-left: 30px;
+	}
+	ul li,
+	ol ul li {
+		list-style: disc;
+	}
+	ol li,
+	ul ol li  {
+		list-style: decimal;
+	}
+}

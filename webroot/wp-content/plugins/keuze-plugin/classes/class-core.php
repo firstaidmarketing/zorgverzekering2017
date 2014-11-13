@@ -25,10 +25,6 @@ class Keuze_Core {
 			array(
 				'menu' => 'Algemene instellingen',
 				'title' => 'Algemeen'
-			),
-			array(
-				'menu' => 'Contact instellingen',
-				'title' => 'Contact'
 			)
 		);
 

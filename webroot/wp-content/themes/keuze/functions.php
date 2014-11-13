@@ -75,9 +75,15 @@ class Keuze_Theme {
 		# Enqueue javascripts
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 11 );
 
+		# Activate editor CSS
+		add_action( 'after_setup_theme', array( $this, 'add_editor_styles' ) );
+
 		# Gravity Forms adjustments
 		add_filter( 'gform_tabindex', function() { return '100'; });
 
+		# Read more link for excerpts
+		add_filter('excerpt_more', array( $this, 'show_readmore_for_excerpt' ) );
+		
 	}
 
 	public function set_locale( $locale ) {
@@ -118,7 +124,14 @@ class Keuze_Theme {
 	 * Register sidebars
 	 */
 	public function register_sidebars() {
-
+		register_sidebar( array(
+			'name' => 'Footer',
+			'id' => 'sidebar-footer',
+			'before_widget' =>  '<div class="column %2$s" id="%1$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h4>',
+			'after_title' => '</h4>'
+		));
 	}
 
 	public function register_shortcodes() {
@@ -223,6 +236,18 @@ class Keuze_Theme {
 		wp_enqueue_script( 'keuze' );
 	}
 
+	public function add_editor_styles() {
+		$font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Lato:400,700' );
+		add_editor_style( $font_url );
+		add_editor_style( 'assets/css/style.css' );
+	}
+
+	public function show_readmore_for_excerpt( $more ) {
+		global $post;
+		
+		return '... <a class="readmore" href="'. get_permalink( $post->ID ) . '">lees meer</a>';
+	}
+
 	/**
 	 * Disable default WordPress widgets
 	 */
@@ -257,6 +282,41 @@ class Keuze_Theme {
 		}
 
 		return $youtube_id;
+	}
+
+	public function get_anchor_links( $content ) {
+		if( empty( $content ) ) {
+			return false;
+		}
+
+		$anchor_links = array();
+
+		$dom = new DOMDocument;
+		$dom->loadHTML( $content );
+		$headings = $dom->getElementsByTagName( 'h2' );
+		foreach( $headings as $heading ) {
+			$id =  $heading->getAttribute( 'id' );
+	        $title = $heading->getAttribute( 'title' );
+	        if( empty( $title ) ) {
+	        	$title = $heading->nodeValue;
+	        }
+
+	        $anchor_links[] = array(
+	          'url' => '#' . $id,
+	          'title' => $title
+	        );
+		}
+
+		return $anchor_links;
+	}
+
+	public function get_title( $post_id ) {
+		$title = get_post_meta( $post_id, 'page_title', true );
+		if( empty( $title ) ) {
+			$title = get_the_title( $post_id );
+		}
+
+		return $title;
 	}
 
 	/**
@@ -295,6 +355,12 @@ class Keuze_Theme {
 
 function keuze_get_youtube_id( $url = '' ) {
 	return Keuze_Theme::instance()->get_youtube_id( $url );
+}
+function keuze_get_anchor_links( $content = '' ) {
+	return Keuze_Theme::instance()->get_anchor_links( $content );
+}
+function keuze_get_title( $post_id ) {
+	return Keuze_Theme::instance()->get_title( $post_id );
 }
 function keuze_theme_url( $url = '' ) {
 	return Keuze_Theme::instance()->theme_url( $url );

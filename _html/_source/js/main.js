@@ -30,6 +30,11 @@ jQuery(document).ready(function($) {
         _searchForm.slideUp();
         _mobileNavHolder.slideToggle();
     });
+    $('.toggle-subnav').click( function(e) {
+        e.preventDefault();
+
+        $(this).next().slideToggle();
+    });
 
     // Action for search button (on mobile)
     $('.nav-main .search-btn').click( function(e) {
@@ -61,6 +66,9 @@ jQuery(document).ready(function($) {
         animation: 'none'
     }).find('.nav-tab').appendTo( $('#overview-tabs .top .right') );
 
+    // Accordion
+    keuze.setAccordions();
+
     // Several form actions
     $('input.kenteken').blur( function() {
         $(this).val( keuze.formatKenteken( $(this).val() ) );
@@ -69,10 +77,21 @@ jQuery(document).ready(function($) {
     // Equal heights
     keuze.setEqualHeights();
 
+    // Scroll to internal anchor tags
+    $('aside.left a[href*=#]').on('click',function (e) {
+        var target = this.hash;
+        console.log( target );
+        if( target != '' && typeof target != 'undefined' ) {
+            e.preventDefault();
+            keuze.scrollToHash( target );
+        }
+    });
+
 
     // Move header when logged in
     if( $('#wpadminbar').length > 0 ) {
         _header.css('top', $('#wpadminbar').height() + 'px' );
+        //_body.css('padding-top', ( parseInt( _body.css('padding-top') ) + $('#wpadminbar').height() ) + 'px' );
     }
 
 });
@@ -114,8 +133,27 @@ jQuery(document).ready(function($) {
             });
         }
 
+        function setAccordions() {
+            $('.accordion').each( function() {
+                var allPanels = $('.answer', this).hide();
+
+                $('li > a', this).click(function() {
+                    allPanels.slideUp();
+                    var $answer = $(this).parent().find('.answer');
+
+                    if( !$answer.is(':visible') ) {
+                        $(this).parent().find('.answer').slideDown();
+                    }
+
+                    return false;
+                });
+            });
+        }
+
         function setEqualHeights() {
-            var itemsPerRowHomepage = 4;
+
+            // Homepage entries
+            var itemsPerRow = 4;
             if( windowWidth <= keuze.settings.tabletWidth && windowWidth > keuze.settings.mobileWidth ) {
                 itemsPerRow = 2;
             }
@@ -126,8 +164,17 @@ jQuery(document).ready(function($) {
             $('.home-entries .entry:nth-child(' + itemsPerRow + 'n-' + ( itemsPerRow - 1 ) + ') ').each( function() {
                 $(this).closest('.entry').nextAll().andSelf().slice( 0, itemsPerRow ).find('.oneliner').equalHeights();
             });
+
+            // Homepage widgets
+            itemsPerRow = 2;
+            $('.sidebar-home .widget:nth-child(' + itemsPerRow + 'n-' + ( itemsPerRow - 1 ) + ') ').each( function() {
+                $(this).closest('.widget').nextAll().andSelf().slice( 0, itemsPerRow ).equalHeights();
+            });
+
+            // Footer widgets
+            $('#footer .column').equalHeights();
         }
-        
+
         function formatKenteken( Licenseplate ) {
             Licenseplate = Licenseplate.replace( /\-/g, '' ).toUpperCase();
             var Sidecode = getSideCodekenten(Licenseplate);
@@ -172,6 +219,14 @@ jQuery(document).ready(function($) {
             return false;
         }
 
+        function scrollToHash( target ) {
+            $('html, body').stop().animate({
+                'scrollTop': $(target).offset().top
+            }, 900, 'swing', function () {
+                window.location.hash = target;
+            });
+        }
+
         function checkForTouch() {
             if( navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || 
                 navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || 
@@ -203,9 +258,11 @@ jQuery(document).ready(function($) {
             settings : settings,
             handleResponiveActions : handleResponiveActions,
             setMenuActiveItem : setMenuActiveItem,
+            setAccordions : setAccordions,
             setEqualHeights : setEqualHeights,
             formatKenteken : formatKenteken,
             getSideCodekenten : getSideCodekenten,
+            scrollToHash : scrollToHash,
             checkForTouch : checkForTouch,
             handleBodyClasses  : handleBodyClasses,
         }

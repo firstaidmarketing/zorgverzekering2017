@@ -26,9 +26,12 @@ Version: 1.0
 @import "shared/buttons";
 @import "shared/forms";
 @import "shared/tables";
+@import "shared/accordion";
 
 @import "sections/home";
 @import "sections/content";
 @import "sections/overview";
 @import "sections/sidebar";
 @import "sections/widgets";
+
+@import "sections/admin-editor";

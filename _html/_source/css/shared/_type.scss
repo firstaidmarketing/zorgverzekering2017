@@ -50,11 +50,18 @@ a {
 	&:hover {
 		color: $link-color-hover;
 	}
+
+	&.readmore {
+		color: $green;
+
+		&:hover {
+			color: $darkgreen;			
+		}
+	}
 }
 
 h1, h2, h3 {
 	margin-bottom: rhythm(1);
-	font-weight: bold;
 }
 h1 {
 	@extend %header-1-size;
@@ -64,6 +71,8 @@ h2 {
 }
 h3 {
 	@extend %header-3-size;
+	margin-bottom: 0;
+	font-weight: bold;
 }
 
 strong {

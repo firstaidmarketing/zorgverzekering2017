@@ -1,0 +1,43 @@
+.accordion {
+    @include clearfix;
+    margin: rhythm(1) 0;
+    border: 1px solid $midgrey;
+    border-top: 0;
+
+    h3 {
+        background: $green;
+        padding: rhythm(0.5);
+        color: $white;
+        @include border-top-radius( 4px );
+
+        a {
+            color: $white;
+        }
+    }
+    
+    li {
+        padding: rhythm(0.5);
+        border-bottom: 1px solid $midgrey;
+
+        a {
+            display: block;
+            color: $black;
+            font-weight: bold;
+        }
+
+        .question {
+
+        }
+    }
+    
+    dd {
+        border-top: 0; 
+        font-size: 12px;
+        
+        &:last-of-type {
+            border-top: 1px solid white;
+            position: relative;
+            top: -1px;
+        }
+    }
+}

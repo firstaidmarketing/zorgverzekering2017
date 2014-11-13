@@ -8,6 +8,10 @@ html, body {
 
 body {
 	padding-top: 140px;
+
+	&.wp-autoresize {
+		margin: 10px;
+	}
 }
 
 .wrapper {

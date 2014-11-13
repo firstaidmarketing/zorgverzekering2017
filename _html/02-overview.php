@@ -24,7 +24,12 @@
 		</section>
 
 		<section id="keuzehulp" class="tab">
-			<div class="left">
+			<aside class="left">
+				<a href="javascript:;" class="toggle-subnav">
+					<span class="bars"><span></span><span></span><span></span></span>
+					<span class="text">Toon menu</span>
+				</a>
+
 				<ul class="nav">
 			        <li class="current-menu-item">
 			        	<a href="#">Overzicht</a>
@@ -41,7 +46,7 @@
 			        <li><a href="#">Energie</a></li>
 			        <li><a href="#">Mobiel</a></li>
 			    </ul>
-			</div>
+			</aside>
 			<div class="right">
 				<div class="inner">
 					<h1>Autoverzekeringen vergelijken: Hoe kies je de juiste verzekering voor jouw auto?</h1>

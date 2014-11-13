@@ -1133,10 +1133,10 @@ img.mfp-img {
 
 /* Accordion responsive breakpoint */
 @media screen and (max-width: 960px) {
-  #form-tabs .r-tabs .r-tabs-nav {
+  #form-tabs.r-tabs .r-tabs-nav {
     display: none;
   }
-  #form-tabs .r-tabs .r-tabs-accordion-title {
+  #form-tabs.r-tabs .r-tabs-accordion-title {
     display: block;
   }
 }
@@ -1322,10 +1322,10 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 52px;
-  line-height: 5.2rem;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 26px;
+  line-height: 2.6rem;
 }
 
 body {
@@ -1354,9 +1354,19 @@ a {
 a:hover {
   color: #6e8eaf;
 }
+a.readmore {
+  color: #00ba8b;
+}
+a.readmore:hover {
+  color: #00a178;
+}
 
 h1, h2, h3 {
   margin-bottom: 2.6rem;
+}
+
+h3 {
+  margin-bottom: 0;
   font-weight: bold;
 }
 
@@ -1378,6 +1388,9 @@ html, body {
 
 body {
   padding-top: 140px;
+}
+body.wp-autoresize {
+  margin: 10px;
 }
 
 .wrapper {
@@ -1410,7 +1423,7 @@ body {
   }
 }
 
-.main-content .inner, .results .tab .right .inner {
+.main-content .inner, .results .right .inner {
   max-width: 1154px;
   margin-left: auto;
   margin-right: auto;
@@ -1420,7 +1433,7 @@ body {
   margin-right: 0;
   padding: 2.6rem;
 }
-.main-content .inner:after, .results .tab .right .inner:after {
+.main-content .inner:after, .results .right .inner:after {
   content: "";
   display: table;
   clear: both;
@@ -1744,6 +1757,8 @@ figure.alignright {
   margin-right: 2.12766%;
   width: 23.40426%;
   margin-bottom: 2.6rem;
+  padding-right: 10px;
+  border-right: 1px solid #cfcece;
 }
 #footer .column:last-child {
   margin-right: 0;
@@ -1758,6 +1773,9 @@ figure.alignright {
   #footer .column:last-child {
     margin-right: 0;
   }
+}
+#footer .column:last-child {
+  border: 0;
 }
 #footer .column h4 {
   margin-bottom: 0;
@@ -2170,6 +2188,45 @@ table th {
 table td {
   padding: 15px 0px;
   border-bottom: 1px solid #f2f2f2;
+}
+
+.accordion {
+  margin: 2.6rem 0;
+  border: 1px solid #f2f2f2;
+  border-top: 0;
+}
+.accordion:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.accordion h3 {
+  background: #00ba8b;
+  padding: 1.3rem;
+  color: white;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.accordion h3 a {
+  color: white;
+}
+.accordion li {
+  padding: 1.3rem;
+  border-bottom: 1px solid #f2f2f2;
+}
+.accordion li a {
+  display: block;
+  color: #415b76;
+  font-weight: bold;
+}
+.accordion dd {
+  border-top: 0;
+  font-size: 12px;
+}
+.accordion dd:last-of-type {
+  border-top: 1px solid white;
+  position: relative;
+  top: -1px;
 }
 
 .featured {
@@ -2602,11 +2659,27 @@ table td {
   padding: 2.6rem;
 }
 
+article.post h2 {
+  line-height: 1.5em;
+}
+article.post ul, article.post ol {
+  margin-left: 30px;
+}
+article.post ul li,
+article.post ol ul li {
+  list-style: disc;
+}
+article.post ol li,
+article.post ul ol li {
+  list-style: decimal;
+}
+
 .search-overview {
   min-height: 700px;
 }
 .search-overview .top {
   position: relative;
+  min-height: 130px;
   background-color: #f2f2f2;
   background-image: url("../images/bg-header.png");
   background-repeat: no-repeat;
@@ -2621,6 +2694,11 @@ table td {
   position: static;
   float: left;
   width: 350px;
+}
+@media screen and (max-width: 790px) {
+  .search-overview .top .left {
+    display: none;
+  }
 }
 .search-overview .nav-tab {
   position: absolute;
@@ -2677,6 +2755,16 @@ table td {
   width: 100%;
   margin-left: 350px;
 }
+@media screen and (max-width: 790px) {
+  .search-overview .left,
+  .search-overview .right {
+    position: static;
+    float: none;
+    display: block;
+    width: auto;
+    margin-left: 0;
+  }
+}
 
 .results {
   margin-bottom: 5.2rem;
@@ -2687,43 +2775,82 @@ table td {
   display: table;
   clear: both;
 }
-.results .tab .left {
+.results .left {
   padding: 2.6rem;
+  padding-bottom: 0;
 }
-.results .tab .left .nav {
+.results .left .toggle-subnav {
+  display: none;
+}
+@media screen and (max-width: 790px) {
+  .results .left .toggle-subnav {
+    display: block;
+    background: #f2f2f2;
+    padding: 10px;
+  }
+  .results .left .toggle-subnav:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.results .left .toggle-subnav .bars {
+  float: left;
+  margin-right: 10px;
+}
+.results .left .toggle-subnav .bars span {
+  display: block;
+  width: 19px;
+  height: 3px;
+  margin: 4px 0;
+  background: #415b76;
+  z-index: 99;
+  -webkit-transition: background 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+}
+.results .left .toggle-subnav:hover .bars span {
+  background-color: #6e8eaf;
+}
+.results .left .nav {
   background: #f2f2f2;
   border-top: 2px solid #00ba8b;
 }
-.results .tab .left .nav li {
+@media screen and (max-width: 790px) {
+  .results .left .nav {
+    display: none;
+  }
+}
+.results .left .nav li {
   display: block;
   border-bottom: 1px solid #ddd;
 }
-.results .tab .left .nav li a {
+.results .left .nav li a {
   display: block;
   padding: 1.3rem 30px;
   -webkit-transition: background;
   -moz-transition: background;
   transition: background;
 }
-.results .tab .left .nav li a:hover {
+.results .left .nav li a:hover {
   background-color: white;
 }
-.results .tab .left .nav li.current-menu-item, .results .tab .left .nav li.current-menu-item a,
-.results .tab .left .nav li a:hover {
+.results .left .nav li.current-menu-item, .results .left .nav li.current-menu-item a,
+.results .left .nav li a:hover {
   background-color: white;
   color: #415b76;
 }
-.results .tab .left .nav li ul {
+.results .left .nav li ul {
   margin-bottom: 1.3rem;
 }
-.results .tab .left .nav li ul li {
+.results .left .nav li ul li {
   border: 0;
 }
-.results .tab .left .nav li ul li a {
+.results .left .nav li ul li a {
   padding: 5px 10px 5px 45px;
   color: #6e8eaf;
 }
-.results .tab .right {
+.results .right {
   width: auto;
 }
 
@@ -2778,4 +2905,80 @@ table td {
 }
 .widget ul {
   margin-bottom: 2.6rem;
+}
+.widget-recent-news li, .widget-recent-reviews li {
+  margin-bottom: 2.6rem;
+}
+.widget-recent-news li .side, .widget-recent-reviews li .side {
+  float: left;
+  width: 20%;
+  text-align: center;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 52px;
+  line-height: 5.2rem;
+  font-weight: bold;
+}
+.widget-recent-news li .side span, .widget-recent-reviews li .side span {
+  display: block;
+}
+.widget-recent-news li .side .month, .widget-recent-reviews li .side .month {
+  margin-top: -2.6rem;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 52px;
+  line-height: 5.2rem;
+}
+.widget-recent-news li .text, .widget-recent-reviews li .text {
+  margin-left: 20%;
+  padding-left: 2.6rem;
+  border-left: 1px solid #ececec;
+}
+.widget-recent-news li .text h3, .widget-recent-reviews li .text h3 {
+  margin: 0;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 26px;
+  line-height: 2.6rem;
+}
+.widget-recent-news .readall, .widget-recent-reviews .readall {
+  margin-left: 20%;
+  padding-left: 2.6rem;
+}
+
+body.wp-autoresize {
+  margin: 10px;
+}
+body.wp-autoresize h1 {
+  font-size: 30px;
+  font-size: 3rem;
+  line-height: 52px;
+  line-height: 5.2rem;
+  margin-bottom: 2.6rem;
+}
+body.wp-autoresize h2 {
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 52px;
+  line-height: 5.2rem;
+  margin-bottom: 2.6rem;
+}
+body.wp-autoresize h3 {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 26px;
+  line-height: 2.6rem;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+body.wp-autoresize ul, body.wp-autoresize ol {
+  margin-left: 30px;
+}
+body.wp-autoresize ul li,
+body.wp-autoresize ol ul li {
+  list-style: disc;
+}
+body.wp-autoresize ol li,
+body.wp-autoresize ul ol li {
+  list-style: decimal;
 }

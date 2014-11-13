@@ -4,6 +4,7 @@
 	.top {
 		@include clearfix;
 		position: relative;
+		min-height: 130px;
 		background: {
 			color: $midgrey;
 			image: url('../images/bg-header.png');
@@ -15,6 +16,12 @@
 			position: static;
 			float: left;
 			width: 350px;
+		}
+
+		@include media( $tablet-portrait ) {
+			.left {
+				display: none;
+			}
 		}
 	}
 
@@ -80,6 +87,16 @@
 		width: 100%;
 		margin-left: 350px;
 	}
+	@include media( $tablet-portrait ) {
+		.left,
+		.right {
+			position: static;
+			float: none;
+			display: block;
+			width: auto;
+			margin-left: 0;
+		}
+	}
 }
 
 .results {
@@ -87,57 +104,91 @@
 	margin-bottom: rhythm(2);
 	position: relative;
 
-	.tab {
-		.left {
-			padding: rhythm(1);
+	.left {
+		padding: rhythm(1);
+		padding-bottom: 0;
 
-			.nav {
+		.toggle-subnav {
+			display: none;
+
+			@include media( $tablet-portrait ) {
+				@include clearfix;
+				display: block;
 				background: $midgrey;
-				border-top: 2px solid $green;
+				padding: 10px;
+			}
 
-				li {
+			.bars {
+				float: left;
+				margin-right: 10px;
+
+				span {
 					display: block;
-					border-bottom: 1px solid #ddd;
+					width: 19px;
+					height: 3px;
+					margin: 4px 0;
+					background: $black;
+					z-index: 99;
 
-					a {
-						display: block;
-						padding: rhythm(0.5) 30px;
-						@include transition ( background );
+					@include transition ( background 0.2s ease-in-out );
+				}
+			}
 
-						&:hover {
-							background-color: lighten( $midgrey, 20% );	
-						}
+			&:hover {
+				.bars span {
+					background-color: $link-color-hover;
+				}
+			}
+		}
+		.nav {
+			background: $midgrey;
+			border-top: 2px solid $green;
+
+			@include media( $tablet-portrait ) {
+				display: none;
+			}
+
+			li {
+				display: block;
+				border-bottom: 1px solid #ddd;
+
+				a {
+					display: block;
+					padding: rhythm(0.5) 30px;
+					@include transition ( background );
+
+					&:hover {
+						background-color: lighten( $midgrey, 20% );	
 					}
+				}
 
-					&.current-menu-item ,
-					&.current-menu-item a,
-					a:hover {
-						background-color: $white;
-						color: $blue;
-					}
+				&.current-menu-item ,
+				&.current-menu-item a,
+				a:hover {
+					background-color: $white;
+					color: $blue;
+				}
 
-					ul {
-						margin-bottom: rhythm(0.5);
+				ul {
+					margin-bottom: rhythm(0.5);
 
-						li {
-							border: 0;
+					li {
+						border: 0;
 
-							a {
-								padding: 5px 10px 5px 45px;
-								color: lighten( $blue, 20% );	
-							}
+						a {
+							padding: 5px 10px 5px 45px;
+							color: lighten( $blue, 20% );	
 						}
 					}
 				}
 			}
 		}
-		.right {
-			width: auto;
+	}
+	.right {
+		width: auto;
 
-			.inner {
-				@extend %full-wrapper;
-			}
-
+		.inner {
+			@extend %full-wrapper;
 		}
-	}	
+	}
 }
