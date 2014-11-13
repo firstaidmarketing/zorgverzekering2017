@@ -33,6 +33,10 @@
     }
 
 ?>
+<a href="javascript:;" class="toggle-subnav">
+    <span class="bars"><span></span><span></span><span></span></span>
+    <span class="text">Toon menu</span>
+</a>
 <ul class="nav">
     <?php
         foreach( $menu_items as $page_id => $item ) {

@@ -2210,23 +2210,22 @@ table td {
 .accordion h3 a {
   color: white;
 }
-.accordion li {
+.accordion ol {
+  margin-left: 0 !important;
+}
+.accordion ol li {
   padding: 1.3rem;
+  list-style: decimal;
+  list-style-position: inside;
   border-bottom: 1px solid #f2f2f2;
 }
-.accordion li a {
+.accordion ol li:last-child {
+  border-bottom: 0;
+}
+.accordion ol li a {
   display: block;
   color: #415b76;
   font-weight: bold;
-}
-.accordion dd {
-  border-top: 0;
-  font-size: 12px;
-}
-.accordion dd:last-of-type {
-  border-top: 1px solid white;
-  position: relative;
-  top: -1px;
 }
 
 .featured {
@@ -2667,11 +2666,11 @@ article.post ul, article.post ol {
 }
 article.post ul li,
 article.post ol ul li {
-  list-style: disc;
+  list-style-type: disc;
 }
 article.post ol li,
 article.post ul ol li {
-  list-style: decimal;
+  list-style-type: decimal;
 }
 
 .search-overview {
@@ -2777,6 +2776,7 @@ article.post ul ol li {
 }
 .results .left {
   padding: 2.6rem;
+  padding-bottom: 0;
 }
 .results .left .toggle-subnav {
   display: none;
