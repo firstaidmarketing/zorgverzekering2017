@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
     keuze.checkForTouch();
 
     // Clone menu for mobile navigation
-    $('.nav-main .sf-menu').clone().appendTo('.mobile-nav-holder').find('li.mobile').remove();
+    $('.nav-main .sf-menu').clone().appendTo( _mobileNavHolder ).find('li.mobile').remove();
 
     // Actions for window resizing
     _window.resize( function() {

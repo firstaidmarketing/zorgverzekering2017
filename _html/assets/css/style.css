@@ -1297,35 +1297,35 @@ html {
 
 html body, html input, html textarea, html button {
   font-size: 1.5rem;
-  line-height: 2.6rem;
+  line-height: 2.3rem;
 }
 
 select, .gform_body .gfield select {
   font-size: 15px;
   font-size: 1.5rem;
-  line-height: 26px;
-  line-height: 2.6rem;
+  line-height: 23px;
+  line-height: 2.3rem;
 }
 
 h1, #form-tabs .panels .tab h2, .why-keuze h2 {
   font-size: 30px;
   font-size: 3rem;
-  line-height: 52px;
-  line-height: 5.2rem;
+  line-height: 46px;
+  line-height: 4.6rem;
 }
 
 h2 {
   font-size: 20px;
   font-size: 2rem;
-  line-height: 52px;
-  line-height: 5.2rem;
+  line-height: 46px;
+  line-height: 4.6rem;
 }
 
 h3 {
   font-size: 15px;
   font-size: 1.5rem;
-  line-height: 26px;
-  line-height: 2.6rem;
+  line-height: 23px;
+  line-height: 2.3rem;
 }
 
 body {
@@ -1362,7 +1362,7 @@ a.readmore:hover {
 }
 
 h1, h2, h3 {
-  margin-bottom: 2.6rem;
+  margin-bottom: 2.3rem;
 }
 
 h3 {
@@ -1387,7 +1387,7 @@ html, body {
 }
 
 body {
-  padding-top: 140px;
+  padding-top: 130px;
 }
 body.wp-autoresize {
   margin: 10px;
@@ -1413,8 +1413,8 @@ body.wp-autoresize {
 
 .outer-wrapper {
   position: relative;
-  padding-left: 2.6rem;
-  padding-right: 2.6rem;
+  padding-left: 2.3rem;
+  padding-right: 2.3rem;
 }
 @media screen and (max-width: 960px) {
   .outer-wrapper {
@@ -1431,7 +1431,7 @@ body.wp-autoresize {
   max-width: 1520px;
   margin-left: 0;
   margin-right: 0;
-  padding: 2.6rem;
+  padding: 2.3rem;
 }
 .main-content .inner:after, .results .right .inner:after {
   content: "";
@@ -1440,7 +1440,7 @@ body.wp-autoresize {
 }
 
 .section {
-  padding: 5.2rem 0;
+  padding: 4.6rem 0;
 }
 .section:after {
   content: "";
@@ -1451,8 +1451,8 @@ body.wp-autoresize {
   background: #f2f2f2;
 }
 
-.home-entries .entry, .sidebar-home .content, .main-content article.post, .sidebar-home .widget {
-  padding: 2.6rem;
+.home-entries .entry, .sidebar-home .content, .main-content .content-wrapper, .sidebar-home .widget {
+  padding: 2.3rem;
   background: white;
   border-radius: 4px;
   box-shadow: inset 0px -3px 0px 0px rgba(0, 0, 0, 0.19);
@@ -1523,8 +1523,8 @@ figure.alignright {
 .header-top .outer-wrapper {
   width: 100%;
   height: 62px;
-  padding-top: 1.3rem;
-  padding-bottom: 1.3rem;
+  padding-top: 1.15rem;
+  padding-bottom: 1.15rem;
   background-image: url("../images/logo-big.png");
   background-repeat: no-repeat;
   background-position: left -62px;
@@ -1541,7 +1541,7 @@ figure.alignright {
 }
 @media screen and (max-width: 580px) {
   .header-top .outer-wrapper {
-    height: 7.8rem;
+    height: 6.9rem;
   }
 }
 .header-top .left {
@@ -1555,7 +1555,7 @@ figure.alignright {
 }
 .header-top .left p {
   margin: 0;
-  line-height: 2.6rem;
+  line-height: 2.3rem;
 }
 .header-top .right {
   text-align: right;
@@ -1581,8 +1581,8 @@ figure.alignright {
   margin-right: 10px;
   font-size: 17px;
   font-size: 1.7rem;
-  line-height: 26px;
-  line-height: 2.6rem;
+  line-height: 46px;
+  line-height: 4.6rem;
 }
 .header-top .right .contact .message {
   color: #f2f2f2;
@@ -1640,7 +1640,7 @@ figure.alignright {
 
 .header-nav .outer-wrapper {
   width: 100%;
-  height: 7.8rem;
+  height: 6.9rem;
   background-image: url("../images/logo-big.png");
   background-repeat: no-repeat;
   background-position: left -124px;
@@ -1661,7 +1661,7 @@ figure.alignright {
 .header-nav .nav-main .logo {
   float: left;
   margin-right: 18px;
-  padding-top: 2.6rem;
+  padding-top: 2.3rem;
 }
 @media screen and (max-width: 580px) {
   .header-nav .nav-main .logo {
@@ -1688,8 +1688,8 @@ figure.alignright {
 }
 .header-nav .trust {
   float: right;
-  padding: 2.6rem 0 0 20px;
-  height: 7.8rem;
+  padding: 2.3rem 0 0 20px;
+  height: 6.9rem;
   text-align: right;
   border-left: 1px solid #ececec;
 }
@@ -1709,7 +1709,7 @@ figure.alignright {
 }
 
 #footer {
-  padding: 5.2rem 0 2.6rem 0;
+  padding: 4.6rem 0 2.3rem 0;
   border-top: 1px solid #cfcece;
 }
 #footer:after {
@@ -1745,10 +1745,10 @@ figure.alignright {
   }
 }
 #footer .logo {
-  margin-bottom: 2.6rem;
+  margin-bottom: 2.3rem;
 }
 #footer h4 {
-  margin-bottom: 2.6rem;
+  margin-bottom: 2.3rem;
   font-weight: bold;
 }
 #footer .column {
@@ -1756,7 +1756,7 @@ figure.alignright {
   display: block;
   margin-right: 2.12766%;
   width: 23.40426%;
-  margin-bottom: 2.6rem;
+  margin-bottom: 2.3rem;
   padding-right: 10px;
   border-right: 1px solid #cfcece;
 }
@@ -1782,7 +1782,7 @@ figure.alignright {
 }
 
 .nav-main {
-  height: 7.8rem;
+  height: 6.9rem;
 }
 .nav-main .sf-menu {
   margin-left: 60px;
@@ -1796,8 +1796,8 @@ figure.alignright {
   position: relative;
   float: left;
   text-align: center;
-  padding: 2.6rem 0;
-  height: 7.8rem;
+  padding: 2.3rem 0;
+  height: 6.9rem;
   border-right: 1px solid #ececec;
   background: white;
   z-index: 2;
@@ -1811,8 +1811,9 @@ figure.alignright {
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
   font-size: 17px;
   font-size: 1.7rem;
-  line-height: 26px;
-  line-height: 2.6rem;
+  line-height: 46px;
+  line-height: 4.6rem;
+  line-height: 2.3rem;
 }
 .nav-main .sf-menu li a.sf-with-ul {
   padding-right: 30px;
@@ -1827,8 +1828,8 @@ figure.alignright {
     padding-right: 20px;
     font-size: 15px;
     font-size: 1.5rem;
-    line-height: 26px;
-    line-height: 2.6rem;
+    line-height: 23px;
+    line-height: 2.3rem;
   }
 }
 .nav-main .sf-menu li.home {
@@ -1920,20 +1921,20 @@ figure.alignright {
   height: auto;
   padding: 0;
   text-align: left;
-  line-height: 2.6rem;
+  line-height: 2.3rem;
   border: 0;
   border-bottom: 1px solid #ececec;
 }
 .nav-main .sf-menu li ul li a {
-  padding: 1.3rem 20px;
-  line-height: 2.6rem;
+  padding: 1.15rem 20px;
+  line-height: 2.3rem;
   text-transform: none;
   font-weight: normal;
   background: none;
   font-size: 14px;
   font-size: 1.4rem;
-  line-height: 26px;
-  line-height: 2.6rem;
+  line-height: 23px;
+  line-height: 2.3rem;
 }
 .nav-main .sf-menu li ul li a:hover {
   background: #f2f2f2;
@@ -1947,7 +1948,7 @@ figure.alignright {
     position: fixed;
     background: white;
     width: 100%;
-    padding: 2.6rem 0;
+    padding: 2.3rem 0;
     z-index: 99;
     box-shadow: 0 3px 7px 3px rgba(0, 0, 0, 0.2);
     border-bottom: 2px solid #575757;
@@ -1967,12 +1968,12 @@ figure.alignright {
 }
 @media screen and (max-width: 790px) {
   .mobile-nav-holder li a {
-    padding-left: 2.6rem;
-    padding-right: 2.6rem;
+    padding-left: 2.3rem;
+    padding-right: 2.3rem;
     font-size: 17px;
     font-size: 1.7rem;
-    line-height: 26px;
-    line-height: 2.6rem;
+    line-height: 46px;
+    line-height: 4.6rem;
   }
   .mobile-nav-holder li a:hover {
     color: #80ddc6;
@@ -1981,10 +1982,10 @@ figure.alignright {
     display: block;
     min-width: 0;
     position: static;
-    padding-bottom: 2.6rem;
+    padding-bottom: 2.3rem;
   }
   .mobile-nav-holder li .sub-menu li {
-    padding-left: 5.2rem;
+    padding-left: 4.6rem;
     border: 0;
   }
   .mobile-nav-holder li .sub-menu li a {
@@ -1992,8 +1993,8 @@ figure.alignright {
     padding: 0;
     font-size: 15px;
     font-size: 1.5rem;
-    line-height: 26px;
-    line-height: 2.6rem;
+    line-height: 23px;
+    line-height: 2.3rem;
   }
 }
 
@@ -2002,11 +2003,11 @@ button,
   display: inline-block;
   width: auto;
   padding: 0 30px;
-  height: 5.2rem;
+  height: 4.6rem;
   font-size: 18px;
   font-size: 1.8rem;
-  line-height: 52px;
-  line-height: 5.2rem;
+  line-height: 46px;
+  line-height: 4.6rem;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -2034,15 +2035,15 @@ select, .gform_body .gfield select, input.kenteken, input,
 textarea,
 button {
   border-radius: 0;
-  padding: 1.3rem 15px;
+  padding: 1.15rem 15px;
   border: 1px solid #ddd;
   border-radius: 4px;
   outline: none;
   color: #415b76;
   font-size: 15px;
   font-size: 1.5rem;
-  line-height: 26px;
-  line-height: 2.6rem;
+  line-height: 23px;
+  line-height: 2.3rem;
   -webkit-transition: border-color 0.2s;
   -moz-transition: border-color 0.2s;
   transition: border-color 0.2s;
@@ -2059,7 +2060,7 @@ select, .gform_body .gfield select {
   background-position: right center;
   background-color: white;
   padding-right: 34px;
-  line-height: 2.6rem;
+  line-height: 2.3rem;
   margin: 0;
   width: auto;
   cursor: pointer;
@@ -2090,9 +2091,9 @@ input.kenteken {
   padding-bottom: 5px;
   font-size: 22px;
   font-size: 2.2rem;
-  line-height: 52px;
-  line-height: 5.2rem;
-  height: 5.2rem;
+  line-height: 46px;
+  line-height: 4.6rem;
+  height: 4.6rem;
   font-weight: bold;
   border-left: 25px solid #415b76;
   background-color: #f3bd01;
@@ -2104,10 +2105,10 @@ label {
 }
 
 .gform_body {
-  margin-bottom: 5.2rem;
+  margin-bottom: 4.6rem;
 }
 .gform_body .gfield {
-  margin-bottom: 2.6rem;
+  margin-bottom: 2.3rem;
 }
 .gform_body .gfield:after {
   content: "";
@@ -2142,8 +2143,8 @@ label {
   margin-left: 40%;
   font-size: 16px;
   font-size: 1.6rem;
-  line-height: 26px;
-  line-height: 2.6rem;
+  line-height: 46px;
+  line-height: 4.6rem;
 }
 .gform_body .gfield.gfield_error .validation_message {
   color: #e70000;
@@ -2191,7 +2192,7 @@ table td {
 }
 
 .accordion {
-  margin: 2.6rem 0;
+  margin: 2.3rem 0;
   border: 1px solid #f2f2f2;
   border-top: 0;
 }
@@ -2202,7 +2203,7 @@ table td {
 }
 .accordion h3 {
   background: #00ba8b;
-  padding: 1.3rem;
+  padding: 1.15rem;
   color: white;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -2214,7 +2215,7 @@ table td {
   margin-left: 0 !important;
 }
 .accordion ol li {
-  padding: 1.3rem;
+  padding: 1.15rem;
   list-style: decimal;
   list-style-position: inside;
   border-bottom: 1px solid #f2f2f2;
@@ -2229,7 +2230,7 @@ table td {
 }
 
 .featured {
-  padding: 5.2rem 0;
+  padding: 4.6rem 0;
   background-image: url("../images/bg-home.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -2261,11 +2262,11 @@ table td {
   display: block;
   background: #00ba8b;
   color: white;
-  padding: 1.3rem 40px;
+  padding: 1.15rem 40px;
   font-size: 17px;
   font-size: 1.7rem;
-  line-height: 26px;
-  line-height: 2.6rem;
+  line-height: 46px;
+  line-height: 4.6rem;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   -webkit-transition: none;
@@ -2307,18 +2308,18 @@ table td {
   display: block;
   background: #00ba8b;
   color: white;
-  padding: 1.3rem 40px;
+  padding: 1.15rem 40px;
   font-size: 17px;
   font-size: 1.7rem;
-  line-height: 26px;
-  line-height: 2.6rem;
+  line-height: 46px;
+  line-height: 4.6rem;
   -webkit-transition: none;
   -moz-transition: none;
   transition: none;
   box-shadow: inset 0px -2px 0px 0px rgba(0, 0, 0, 0.19);
 }
 #form-tabs .panels .tab {
-  padding: 2.6rem 5.2rem;
+  padding: 2.3rem 4.6rem;
 }
 #form-tabs .panels .tab:after {
   content: "";
@@ -2330,7 +2331,7 @@ table td {
   display: block;
   margin-right: 2.85714%;
   width: 65.71429%;
-  padding-right: 2.6rem;
+  padding-right: 2.3rem;
   border-right: 1px solid #d5d5d5;
 }
 #form-tabs .panels .tab .form:last-child {
@@ -2342,8 +2343,8 @@ table td {
     display: block;
     margin-right: 3.22581%;
     width: 100%;
-    padding-bottom: 2.6rem;
-    margin-bottom: 2.6rem;
+    padding-bottom: 2.3rem;
+    margin-bottom: 2.3rem;
     border-right: 0;
     border-bottom: 1px solid #d5d5d5;
   }
@@ -2372,8 +2373,8 @@ table td {
   width: 36.84211%;
   font-size: 18px;
   font-size: 1.8rem;
-  line-height: 52px;
-  line-height: 5.2rem;
+  line-height: 46px;
+  line-height: 4.6rem;
 }
 #form-tabs .panels .tab .form label:last-child {
   margin-right: 0;
@@ -2480,8 +2481,8 @@ table td {
   display: block;
   margin-right: 2.12766%;
   width: 23.40426%;
-  margin-bottom: 2.6rem;
-  padding: 2.6rem;
+  margin-bottom: 2.3rem;
+  padding: 2.3rem;
   text-align: center;
 }
 .home-entries .entry:last-child {
@@ -2577,17 +2578,17 @@ table td {
   margin: 0;
   font-size: 22px;
   font-size: 2.2rem;
-  line-height: 52px;
-  line-height: 5.2rem;
+  line-height: 46px;
+  line-height: 4.6rem;
   font-weight: normal;
 }
 
 .why-keuze h2 {
   text-align: center;
-  margin-bottom: 2.6rem;
+  margin-bottom: 2.3rem;
 }
 .why-keuze .usps {
-  padding-top: 5.2rem;
+  padding-top: 4.6rem;
   color: white;
   background: #415b76;
   text-align: center;
@@ -2602,8 +2603,8 @@ table td {
   font-weight: bold;
   font-size: 22px;
   font-size: 2.2rem;
-  line-height: 52px;
-  line-height: 5.2rem;
+  line-height: 46px;
+  line-height: 4.6rem;
 }
 .why-keuze .usps li:before {
   content: "\f00c";
@@ -2625,7 +2626,7 @@ table td {
 }
 
 .sidebar-home {
-  margin-bottom: 5.2rem;
+  margin-bottom: 4.6rem;
 }
 .sidebar-home .content {
   clear: both;
@@ -2633,18 +2634,18 @@ table td {
 .sidebar-home .content h3 {
   font-size: 15px;
   font-size: 1.5rem;
-  line-height: 26px;
-  line-height: 2.6rem;
+  line-height: 23px;
+  line-height: 2.3rem;
   margin: 0;
 }
 
 .breadcrumbs {
-  padding: 2.6rem 2.6rem 1.3rem 2.6rem;
+  padding: 2.3rem 2.3rem 1.15rem 2.3rem;
   box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.19);
   font-size: 16px;
   font-size: 1.6rem;
-  line-height: 26px;
-  line-height: 2.6rem;
+  line-height: 46px;
+  line-height: 4.6rem;
 }
 .breadcrumbs a {
   text-decoration: underline;
@@ -2655,7 +2656,7 @@ table td {
 
 .main-content {
   background: #f2f2f2;
-  padding: 2.6rem;
+  padding: 2.3rem;
 }
 
 article.post h2 {
@@ -2702,7 +2703,7 @@ article.post ul ol li {
 .search-overview .nav-tab {
   position: absolute;
   bottom: 0;
-  margin-left: 5.2rem;
+  margin-left: 4.6rem;
 }
 .search-overview .nav-tab li {
   float: left;
@@ -2766,7 +2767,7 @@ article.post ul ol li {
 }
 
 .results {
-  margin-bottom: 5.2rem;
+  margin-bottom: 4.6rem;
   position: relative;
 }
 .results:after {
@@ -2775,7 +2776,7 @@ article.post ul ol li {
   clear: both;
 }
 .results .left {
-  padding: 2.6rem;
+  padding: 2.3rem;
   padding-bottom: 0;
 }
 .results .left .toggle-subnav {
@@ -2826,7 +2827,7 @@ article.post ul ol li {
 }
 .results .left .nav li a {
   display: block;
-  padding: 1.3rem 30px;
+  padding: 1.15rem 30px;
   -webkit-transition: background;
   -moz-transition: background;
   transition: background;
@@ -2840,7 +2841,7 @@ article.post ul ol li {
   color: #415b76;
 }
 .results .left .nav li ul {
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.15rem;
 }
 .results .left .nav li ul li {
   border: 0;
@@ -2856,9 +2857,9 @@ article.post ul ol li {
 .sidebar h4 {
   font-size: 22px;
   font-size: 2.2rem;
-  line-height: 52px;
-  line-height: 5.2rem;
-  margin-bottom: 2.6rem;
+  line-height: 46px;
+  line-height: 4.6rem;
+  margin-bottom: 2.3rem;
 }
 .sidebar-home:after {
   content: "";
@@ -2870,7 +2871,7 @@ article.post ul ol li {
   display: block;
   margin-right: 2.12766%;
   width: 48.93617%;
-  padding: 2.6rem;
+  padding: 2.3rem;
 }
 .sidebar-home .widget:last-child {
   margin-right: 0;
@@ -2900,13 +2901,13 @@ article.post ul ol li {
 }
 
 .widget {
-  margin-bottom: 5.2rem;
+  margin-bottom: 4.6rem;
 }
 .widget ul {
-  margin-bottom: 2.6rem;
+  margin-bottom: 2.3rem;
 }
 .widget-recent-news li, .widget-recent-reviews li {
-  margin-bottom: 2.6rem;
+  margin-bottom: 2.3rem;
 }
 .widget-recent-news li .side, .widget-recent-reviews li .side {
   float: left;
@@ -2914,35 +2915,35 @@ article.post ul ol li {
   text-align: center;
   font-size: 24px;
   font-size: 2.4rem;
-  line-height: 52px;
-  line-height: 5.2rem;
+  line-height: 46px;
+  line-height: 4.6rem;
   font-weight: bold;
 }
 .widget-recent-news li .side span, .widget-recent-reviews li .side span {
   display: block;
 }
 .widget-recent-news li .side .month, .widget-recent-reviews li .side .month {
-  margin-top: -2.6rem;
+  margin-top: -2.3rem;
   font-size: 18px;
   font-size: 1.8rem;
-  line-height: 52px;
-  line-height: 5.2rem;
+  line-height: 46px;
+  line-height: 4.6rem;
 }
 .widget-recent-news li .text, .widget-recent-reviews li .text {
   margin-left: 20%;
-  padding-left: 2.6rem;
+  padding-left: 2.3rem;
   border-left: 1px solid #ececec;
 }
 .widget-recent-news li .text h3, .widget-recent-reviews li .text h3 {
   margin: 0;
   font-size: 16px;
   font-size: 1.6rem;
-  line-height: 26px;
-  line-height: 2.6rem;
+  line-height: 46px;
+  line-height: 4.6rem;
 }
 .widget-recent-news .readall, .widget-recent-reviews .readall {
   margin-left: 20%;
-  padding-left: 2.6rem;
+  padding-left: 2.3rem;
 }
 
 body.wp-autoresize {
@@ -2951,22 +2952,22 @@ body.wp-autoresize {
 body.wp-autoresize h1 {
   font-size: 30px;
   font-size: 3rem;
-  line-height: 52px;
-  line-height: 5.2rem;
-  margin-bottom: 2.6rem;
+  line-height: 46px;
+  line-height: 4.6rem;
+  margin-bottom: 2.3rem;
 }
 body.wp-autoresize h2 {
   font-size: 20px;
   font-size: 2rem;
-  line-height: 52px;
-  line-height: 5.2rem;
-  margin-bottom: 2.6rem;
+  line-height: 46px;
+  line-height: 4.6rem;
+  margin-bottom: 2.3rem;
 }
 body.wp-autoresize h3 {
   font-size: 15px;
   font-size: 1.5rem;
-  line-height: 26px;
-  line-height: 2.6rem;
+  line-height: 23px;
+  line-height: 2.3rem;
   margin-bottom: 0;
   font-weight: bold;
 }
@@ -2981,3 +2982,5 @@ body.wp-autoresize ol li,
 body.wp-autoresize ul ol li {
   list-style: decimal;
 }
+
+/*# sourceMappingURL=style.css.map */

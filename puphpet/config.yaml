@@ -186,10 +186,10 @@ mysql:
         4iJbHZMfCToJ:
             grant:
                 - ALL
-            name: keuze_wp
+            name: nlkeuz-embrasure
             host: localhost
-            user: keuze_wp
-            password: keuze_wp
+            user: nlkeuz-embrasure
+            password: f267caf3-cbd2-40cd-a291-025dc719ccf7
             sql_file: /var/www/_sql-dumps/latest.sql
 postgresql:
     install: '0'

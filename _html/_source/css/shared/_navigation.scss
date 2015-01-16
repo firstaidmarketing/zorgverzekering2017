@@ -24,6 +24,7 @@
 				border: 0;
 				@include transition ( color 0.2s ease-in-out, background-color 0.2s ease-in-out );
 				@include change-font-size(17px);
+				line-height: rhythm(1);
 
 				&.sf-with-ul {
 					padding-right: 30px;

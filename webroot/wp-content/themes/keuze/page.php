@@ -10,11 +10,13 @@ get_header(); ?>
 
 <section class="main-content">
 	<div class="inner">
-		<article class="post">
-			<h1><?php the_title(); ?></h1>
+		<div class="content-wrapper">
+			<article class="post" itemscope itemtype="http://schema.org/Article">
+				<h1 itemprop="name"><?php the_title(); ?></h1>
 
-			<?php the_content(); ?>		
-		</article>
+				<?php the_content(); ?>
+			</article>
+		</div>
 	</div>
 </section>
 

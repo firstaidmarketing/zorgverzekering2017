@@ -13,9 +13,9 @@ elseif ( file_exists( dirname( __FILE__ ) . '/../../env_production' ) ) {
     define( 'WP_DEBUG', false );
     define( 'WP_CACHE', false );
 
-    define( 'DB_NAME', '' );
-    define( 'DB_USER', '' );
-    define( 'DB_PASSWORD', '' );
+    define( 'DB_NAME', 'nlkeuz-embrasure' );
+    define( 'DB_USER', 'nlkeuz-embrasure' );
+    define( 'DB_PASSWORD', 'f267caf3-cbd2-40cd-a291-025dc719ccf7' );
     define( 'DB_HOST', 'localhost' );
 
 }

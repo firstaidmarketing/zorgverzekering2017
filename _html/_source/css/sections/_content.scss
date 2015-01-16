@@ -19,7 +19,7 @@
 		@extend %full-wrapper;
 	}
 
-	article.post {
+	.content-wrapper {
 		@extend %bg-box;
 	}
 }

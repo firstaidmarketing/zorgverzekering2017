@@ -131,7 +131,7 @@ get_header(); ?>
                 endif;
             ?>
 
-            <p class="readall"><a href="#" class="button">Alle items</a></p>
+            <p class="readall"><a href="<?php echo trailingslashit( get_home_url( null, 'nieuws' ) ); ?>" class="button">Alle items</a></p>
         </section>
 
         <section class="widget widget-recent-reviews">
