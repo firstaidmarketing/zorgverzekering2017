@@ -74,6 +74,18 @@
         </tr>
 
         <tr>
+            <td>Ignore some files</td>
+            <td>%%SUCURI.IgnoreScanningStatus%%</td>
+            <td class="td-with-button">
+                <form action="%%SUCURI.URL.Settings%%#settings-scanner" method="post">
+                    <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
+                    <input type="hidden" name="sucuriscan_ignore_scanning" value="%%SUCURI.IgnoreScanningSwitchValue%%" />
+                    <button type="submit" class="button-primary %%SUCURI.IgnoreScanningSwitchCssClass%%">%%SUCURI.IgnoreScanningSwitchText%%</button>
+                </form>
+            </td>
+        </tr>
+
+        <tr class="alternate">
             <td>Scan error log files</td>
             <td>%%SUCURI.ScanErrorlogsStatus%%</td>
             <td class="td-with-button">
@@ -81,6 +93,42 @@
                     <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
                     <input type="hidden" name="sucuriscan_scan_errorlogs" value="%%SUCURI.ScanErrorlogsSwitchValue%%" />
                     <button type="submit" class="button-primary %%SUCURI.ScanErrorlogsSwitchCssClass%%">%%SUCURI.ScanErrorlogsSwitchText%%</button>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Parse error logs</td>
+            <td>%%SUCURI.ParseErrorLogsStatus%%</td>
+            <td class="td-with-button">
+                <form action="%%SUCURI.URL.Settings%%#settings-scanner" method="post">
+                    <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
+                    <input type="hidden" name="sucuriscan_parse_errorlogs" value="%%SUCURI.ParseErrorLogsSwitchValue%%" />
+                    <button type="submit" class="button-primary %%SUCURI.ParseErrorLogsSwitchCssClass%%">%%SUCURI.ParseErrorLogsSwitchText%%</button>
+                </form>
+            </td>
+        </tr>
+
+        <tr class="alternate">
+            <td>SiteCheck scanner</td>
+            <td>%%SUCURI.SiteCheckScannerStatus%%</td>
+            <td class="td-with-button">
+                <form action="%%SUCURI.URL.Settings%%#settings-scanner" method="post">
+                    <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
+                    <input type="hidden" name="sucuriscan_sitecheck_scanner" value="%%SUCURI.SiteCheckScannerSwitchValue%%" />
+                    <button type="submit" class="button-primary %%SUCURI.SiteCheckScannerSwitchCssClass%%">%%SUCURI.SiteCheckScannerSwitchText%%</button>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>SiteCheck counter</td>
+            <td><span class="sucuriscan-monospace">%%SUCURI.SiteCheckCounter%% scans so far</span></td>
+            <td class="td-with-button">
+                <form action="%%SUCURI.URL.Scanner%%" method="post">
+                    <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
+                    <input type="hidden" name="sucuriscan_malware_scan" value="1" />
+                    <button type="submit" class="button-primary">Force Scan</button>
                 </form>
             </td>
         </tr>
@@ -119,6 +167,18 @@
                     <select name="sucuriscan_scan_interface">
                         %%SUCURI.ScanningInterfaceOptions%%
                     </select>
+                    <button type="submit" class="button-primary">Change</button>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Error logs limit</td>
+            <td>%%SUCURI.ErrorLogsLimit%% last lines</td>
+            <td class="td-with-button">
+                <form action="%%SUCURI.URL.Settings%%#settings-scanner" method="post">
+                    <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
+                    <input type="text" name="sucuriscan_errorlogs_limit" placeholder="Number of lines to analyze" class="input-text" />
                     <button type="submit" class="button-primary">Change</button>
                 </form>
             </td>
