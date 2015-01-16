@@ -1,0 +1,31 @@
+Array
+(
+    [SERVER_SOFTWARE] => Apache/2.2.22 (Ubuntu)
+    [REQUEST_URI] => /wp-admin/admin.php?page=compmodule/compmodule.php&kmpupdated=true
+    [HTTP_HOST] => www.zorgverzekering.acc
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:33.0) Gecko/20100101 Firefox/33.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => en-US,en;q=0.5
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://www.zorgverzekering.acc/wp-admin/admin.php?page=compmodule/compmodule.php
+    [HTTP_COOKIE] => wordpress_8df5c0605a7a76aaa5ed3b5495254037=Sophie%7C1416586357%7Cu5ZARNiFoNppkEvkMS9dkz5CelOrKtn13OP86PPVnaK%7C196831e00552678eb8557c48a8c17a8e9db184210f1577eb99eb3f45a7dbeffc; kmp-referer=http%3A%2F%2Fwww.zorgverzekering.acc%2F; kmp-ip=217.121.1.17; kmp-useragent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10.10%3B+rv%3A33.0%29+Gecko%2F20100101+Firefox%2F33.0+FirePHP%2F0.7.4; kmpcode=eyJpdiI6ImVHa1RoSVJuOHFzMFZ0RjBVNHNtNlE9PSIsInZhbHVlIjoiM0x4blVMekJvNFwvUDA5VEU1S0ozZ0Z2RDBtbzB2akcyMkJmaDFMRGdhNk5POVl1UGJ4YTRxUmpVWTZ3eFR1eEJUb1RIY2NKRm9KUmE2eTkrd0N4NkdnPT0iLCJtYWMiOiJlZjk4OGMwYTk1MzI3ODJiMGFkMGJjZGFhNzU3ZTM5MGQ1MTYxYjYwOWYwOTk1YmZlMzU0YjczZDU0YTYwN2Q2In0%3D; PHPSESSID=ogg5tppvn7kt8imgan7en3eon5; __utma=46691500.1050874443.1416413547.1416413547.1416413547.1; __utmb=46691500.4.10.1416413547; __utmc=46691500; __utmz=46691500.1416413547.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmt=1; wordpress_test_cookie=WP+Cookie+check; wordpress_logged_in_8df5c0605a7a76aaa5ed3b5495254037=Sophie%7C1416586357%7Cu5ZARNiFoNppkEvkMS9dkz5CelOrKtn13OP86PPVnaK%7Cdf5228179fb88d64d16861dc034c6794f58068c371de0a68abde05ad341f6a5c; wp-settings-3=libraryContent%3Dbrowse%26wplink%3D1%26imgsize%3Dfull%26hidetb%3D1%26editor%3Dhtml%26urlbutton%3Dnone%26advImgDetails%3Dhide; wp-settings-time-3=1416413561
+    [HTTP_CONNECTION] => keep-alive
+    [PATH] => /usr/local/bin:/usr/bin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.2.22 (Ubuntu) Server at www.zorgverzekering.acc Port 80</address>
+
+    [SERVER_NAME] => www.zorgverzekering.acc
+    [SERVER_ADDR] => 5.100.228.28
+    [SERVER_PORT] => 80
+    [REMOTE_ADDR] => 217.121.1.17
+    [DOCUMENT_ROOT] => /sites/zorgverzekering-acc/public_html/
+    [SERVER_ADMIN] => webmaster@zorgverzekering.acc
+    [SCRIPT_FILENAME] => /sites/zorgverzekering-acc/public_html/wp-admin/admin.php
+    [REMOTE_PORT] => 37865
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => page=compmodule/compmodule.php&kmpupdated=true
+    [SCRIPT_NAME] => /wp-admin/admin.php
+    [PHP_SELF] => /wp-admin/admin.php
+    [REQUEST_TIME] => 1416413945
+)
