@@ -8,7 +8,7 @@ vagrantfile-local:
         cpus: '1'
         chosen_provider: virtualbox
         network:
-            private_network: 192.168.56.102
+            private_network: 192.168.56.103
             forwarded_port:
                 4qDKhvtxIK0u:
                     host: '8407'
@@ -80,6 +80,24 @@ apache:
         F0tsaRqq4l67:
             servername: loc.keuze.nl
             docroot: /var/www/webroot
+            port: '80'
+            setenv:
+                - 'APP_ENV dev'
+            override:
+                - All
+            options:
+                - Indexes
+                - FollowSymLinks
+                - MultiViews
+            engine: php
+            custom_fragment: ''
+            ssl_cert: ''
+            ssl_key: ''
+            ssl_chain: ''
+            ssl_certs_dir: ''
+        F0tsaRqq4l68:
+            servername: html.keuze.nl
+            docroot: /var/www/_html
             port: '80'
             setenv:
                 - 'APP_ENV dev'
