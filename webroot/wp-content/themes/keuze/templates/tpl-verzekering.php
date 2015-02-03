@@ -19,14 +19,12 @@ get_header(); ?>
 
 	<div class="results">
 		<section id="vergelijken" class="tab">
-			<div id="kz">
-				<?php 
-					$komparu_script = get_field( 'komparu_script' );
-					$content = do_shortcode( $komparu_script );
+			<?php 
+				$komparu_script = get_field( 'komparu_script' );
+				$content = do_shortcode( $komparu_script );
 
-					echo $content;
-				?>
-			</div>
+				echo $content;
+			?>
 		</section>
 
 		<section id="keuzehulp" class="tab">
