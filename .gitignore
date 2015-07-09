@@ -14,3 +14,5 @@ npm-debug.log
 .vagrant
 /puphpet/files/dot/ssh/*
 !/puphpet/files/dot/ssh/insecure_private_key
+
+.idea
