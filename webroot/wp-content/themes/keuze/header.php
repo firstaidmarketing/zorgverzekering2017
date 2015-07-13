@@ -44,15 +44,6 @@
                         <input type="submit" class="searchsubmit" value=" ">
                     </fieldset>
                 </form>
-
-                <div class="contact">
-                    <?php
-                        $phone_number = get_field( 'phone_number', 'option' );
-                        $phone_number_sanitized = str_replace( '-', '', sanitize_title( $phone_number ) );
-                    ?>
-                    <a href="tel:<?php echo esc_attr( $phone_number_sanitized ); ?>" class="tel"><?php echo esc_attr( $phone_number ); ?></a>
-                    <span class="message">(we zijn bereikbaar)</span>
-                </div>
             </div>
         </section>
     </div>
@@ -74,8 +65,11 @@
             </nav>
 
             <div class="trust">
+                <a href="https://www.thuiswinkel.org/consumenten/" target="_blank"><img src="<?php echo keuze_theme_url( '/assets/images/logo-mcafeetest.png' );?>" alt="McAfee Test"></a>
+                <?php /*
                 <a href="https://www.thuiswinkel.org/consumenten/" target="_blank"><img src="<?php echo keuze_theme_url( '/assets/images/logo-thuiswinkel.png' );?>" alt="Thuiswinkel waarborg"></a>
                 <a href="http://www.truste.com/" target="_blank"><img src="<?php echo keuze_theme_url( '/assets/images/logo-truste.png' );?>" alt="TRUSTe certified privacy"></a>
+                */ ?>
             </div>
         </section>
     </div>

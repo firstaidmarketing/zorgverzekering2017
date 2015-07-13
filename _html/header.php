@@ -38,11 +38,6 @@
                         <input type="submit" class="searchsubmit" value=" ">
                     </fieldset>
                 </form>
-
-                <div class="contact">
-                    <a href="tel:01234567890" class="tel">06 - 12345678</a>
-                    <span class="message">(we zijn bereikbaar)</span>
-                </div>
             </div>
         </section>
     </div>
