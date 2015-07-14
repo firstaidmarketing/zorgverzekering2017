@@ -65,7 +65,7 @@
             </nav>
 
             <div class="trust">
-                <img src="<?php echo keuze_theme_url( '/assets/images/logo-mcafeetest.png' );?>" alt="McAfee Test">
+                <a href="https://www.mcafeesecure.com/verify?host=www.keuze.nl" target="_blank"><img src="<?php echo keuze_theme_url( '/assets/images/logo-mcafeetest.png' );?>" alt="McAfee Test"></a>
                 <?php /*
                 <a href="https://www.thuiswinkel.org/consumenten/" target="_blank"><img src="<?php echo keuze_theme_url( '/assets/images/logo-thuiswinkel.png' );?>" alt="Thuiswinkel waarborg"></a>
                 <a href="http://www.truste.com/" target="_blank"><img src="<?php echo keuze_theme_url( '/assets/images/logo-truste.png' );?>" alt="TRUSTe certified privacy"></a>
