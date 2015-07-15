@@ -2777,6 +2777,7 @@ article.post ul ol li {
   clear: both;
 }
 .results .left {
+  position: relative;
   padding: 2.3rem;
   padding-bottom: 0;
 }
@@ -2813,6 +2814,9 @@ article.post ul ol li {
 .results .left .toggle-subnav:hover .bars span {
   background-color: #6e8eaf;
 }
+.results .left .nav-holder {
+  position: relative;
+}
 .results .left .nav {
   background: #f2f2f2;
   border-top: 2px solid #00ba8b;
@@ -2821,6 +2825,10 @@ article.post ul ol li {
   .results .left .nav {
     display: none;
   }
+}
+.results .left .nav.fixed {
+  position: absolute;
+  width: 100%;
 }
 .results .left .nav li {
   display: block;

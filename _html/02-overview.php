@@ -30,22 +30,24 @@
 					<span class="text">Toon menu</span>
 				</a>
 
-				<ul class="nav">
-			        <li class="current-menu-item">
-			        	<a href="#">Overzicht</a>
-			        	<ul>
-			        		<li><a href="#">Auto</a></li>
-					        <li><a href="#">Zorg</a></li>
-					        <li><a href="#">Reis</a></li>
-			        	</ul>
-			        </li>
-			        <li><a href="#">Reis</a></li>
-			        <li><a href="#">Inboedel</a></li>
-			        <li><a href="#">Recht</a></li>
-			        <li><a href="#">Uitvaart</a></li>
-			        <li><a href="#">Energie</a></li>
-			        <li><a href="#">Mobiel</a></li>
-			    </ul>
+				<div class="nav-holder">
+					<ul class="nav" id="sidebar-nav">
+				        <li class="current-menu-item">
+				            <a href="#">Overzicht</a>
+				            <ul>
+				                <li><a href="#">Auto</a></li>
+						        <li><a href="#">Zorg</a></li>
+						        <li><a href="#">Reis</a></li>
+				            </ul>
+				        </li>
+				        <li><a href="#">Reis</a></li>
+				        <li><a href="#">Inboedel</a></li>
+				        <li><a href="#">Recht</a></li>
+				        <li><a href="#">Uitvaart</a></li>
+				        <li><a href="#">Energie</a></li>
+				        <li><a href="#">Mobiel</a></li>
+				    </ul>
+				</div>
 			</aside>
 			<div class="right">
 				<div class="inner">

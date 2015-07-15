@@ -1,7 +1,9 @@
 var _window = $(window);
 var _body = $('body');
 var _header = $('#header');
+var _headerBottomPos = _header.outerHeight();
 var _mobileNavHolder = $('.mobile-nav-holder');
+var _sidebarNav = $('#sidebar-nav');
 var _searchForm = $('.searchform');
 var _activeMenuItem = $('.nav-main .current-menu-item, .nav-main .current-menu-ancestor');
 
@@ -90,6 +92,11 @@ jQuery(document).ready(function($) {
         }
     });
 
+	// Floating navigation
+	_window.scroll( function() {
+		keuze.floatingMenu();
+	});
+
 
     // Move header when logged in
     if( $('#wpadminbar').length > 0 ) {
@@ -112,6 +119,21 @@ jQuery(document).ready(function($) {
             'is_touch_device': false,
             'navMainOffset': $('.header-nav').offset().top
         };
+
+		function floatingMenu() {
+			var y = _window.scrollTop();
+			console.log( y + ' - ' + _headerBottomPos );
+			if (y >= _headerBottomPos ) {
+				// if so, ad the fixed class
+				_sidebarNav.css({
+					top: y + _headerBottomPos + 'px'
+				});
+			}
+			else {
+				// otherwise remove it
+				_sidebarNav.css('top', 'auto');
+			}
+		}
 
         function handleResponiveActions() {
 
@@ -259,6 +281,7 @@ jQuery(document).ready(function($) {
 
         return {
             settings : settings,
+            floatingMenu : floatingMenu,
             handleResponiveActions : handleResponiveActions,
             setMenuActiveItem : setMenuActiveItem,
             setAccordions : setAccordions,

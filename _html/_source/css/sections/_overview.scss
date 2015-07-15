@@ -105,6 +105,7 @@
 	position: relative;
 
 	.left {
+		position: relative;
 		padding: rhythm(1);
 		padding-bottom: 0;
 
@@ -140,12 +141,21 @@
 				}
 			}
 		}
+
+		.nav-holder {
+			position: relative;
+		}
 		.nav {
 			background: $midgrey;
 			border-top: 2px solid $green;
 
 			@include media( $tablet-portrait ) {
 				display: none;
+			}
+
+			&.fixed {
+				position: absolute;
+				width: 100%;
 			}
 
 			li {

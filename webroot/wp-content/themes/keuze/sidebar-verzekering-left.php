@@ -37,7 +37,7 @@
     <span class="bars"><span></span><span></span><span></span></span>
     <span class="text">Toon menu</span>
 </a>
-<ul class="nav">
+<ul class="nav" id="sidebar-nav">
     <?php
         foreach( $menu_items as $page_id => $item ) {
             echo '<li' . ( $post->ID == $page_id ? ' class="current-menu-item"' : '' ) . '>';
