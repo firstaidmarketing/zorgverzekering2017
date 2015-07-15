@@ -20,6 +20,58 @@ class Keuze_Custom_Fields {
 		}
 
 		register_field_group(array (
+			'id' => 'acf_homepage',
+			'title' => 'Homepage',
+			'fields' => array (
+				array (
+					'key' => 'field_55a605519dcd1',
+					'label' => 'Verzekeringen',
+					'name' => 'verzekeringen',
+					'type' => 'repeater',
+					'sub_fields' => array (
+						array (
+							'key' => 'field_55a6056d9dcd2',
+							'label' => 'Pagina',
+							'name' => 'page',
+							'type' => 'post_object',
+							'column_width' => '',
+							'post_type' => array (
+								0 => 'page',
+							),
+							'taxonomy' => array (
+								0 => 'all',
+							),
+							'allow_null' => 0,
+							'multiple' => 0,
+						),
+					),
+					'row_min' => '',
+					'row_limit' => '',
+					'layout' => 'row',
+					'button_label' => 'Nieuwe verzekering',
+				),
+			),
+			'location' => array (
+				array (
+					array (
+						'param' => 'options_page',
+						'operator' => '==',
+						'value' => 'acf-options-algemeen',
+						'order_no' => 0,
+						'group_no' => 0,
+					),
+				),
+			),
+			'options' => array (
+				'position' => 'normal',
+				'layout' => 'meta_box',
+				'hide_on_screen' => array (
+				),
+			),
+			'menu_order' => 0,
+		));
+
+		register_field_group(array (
 			'id' => 'acf_dit-is-een-verzekering',
 			'title' => 'Dit is een verzekering',
 			'fields' => array (
@@ -28,7 +80,7 @@ class Keuze_Custom_Fields {
 					'label' => 'Dit is een verzekering',
 					'name' => 'is_insurance',
 					'type' => 'true_false',
-					'message' => 'Deze pagina is een verzekering. Toon op de homepage',
+					'message' => 'Deze pagina is een verzekering. Toon op de homepage bij de tabs',
 					'default_value' => 0,
 				),
 			),
