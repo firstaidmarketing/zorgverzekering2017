@@ -24,14 +24,14 @@
 		</section>
 
 		<section id="keuzehulp" class="tab">
-			<aside class="left">
+			<aside class="left" id="sidebar-nav">
 				<a href="javascript:;" class="toggle-subnav">
 					<span class="bars"><span></span><span></span><span></span></span>
 					<span class="text">Toon menu</span>
 				</a>
 
 				<div class="nav-holder">
-					<ul class="nav" id="sidebar-nav">
+					<ul class="nav">
 				        <li class="current-menu-item">
 				            <a href="#">Overzicht</a>
 				            <ul>

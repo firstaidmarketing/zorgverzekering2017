@@ -1,9 +1,12 @@
 var _window = $(window);
 var _body = $('body');
 var _header = $('#header');
+var _footer = $('#footer');
 var _headerBottomPos = _header.outerHeight();
 var _mobileNavHolder = $('.mobile-nav-holder');
 var _sidebarNav = $('#sidebar-nav');
+var sidebarNavBottom = _sidebarNav.offset().top + _sidebarNav.outerHeight();
+console.log( sidebarNavBottom );
 var _searchForm = $('.searchform');
 var _activeMenuItem = $('.nav-main .current-menu-item, .nav-main .current-menu-ancestor');
 
@@ -122,12 +125,15 @@ jQuery(document).ready(function($) {
 
 		function floatingMenu() {
 			var y = _window.scrollTop();
-			console.log( y + ' - ' + _headerBottomPos );
-			if (y >= _headerBottomPos ) {
-				// if so, ad the fixed class
-				_sidebarNav.css({
-					top: y + _headerBottomPos + 'px'
-				});
+            var sidebarBottom = _sidebarNav.offset().top + _sidebarNav.outerHeight();
+            var footerTop = _footer.offset().top;
+
+			if (y >= _headerBottomPos  ) {
+				var pos = y - _headerBottomPos;
+                if( sidebarBottom > footerTop ) {
+                    pos = parseInt( _sidebarNav.css( 'top' ) );
+                }
+				_sidebarNav.css( 'top', pos + 'px' );
 			}
 			else {
 				// otherwise remove it
