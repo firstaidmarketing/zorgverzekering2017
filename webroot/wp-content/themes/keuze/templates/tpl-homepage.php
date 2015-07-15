@@ -66,19 +66,21 @@ get_header(); ?>
 <section class="section section-grey">
     <div class="wrapper home-entries">
         <?php
-            while( $insurances->have_posts() ) : $insurances->the_post();
-                $short_name = get_post_meta( get_the_ID(), 'short_name', true );
-                $short_name_sanitized = esc_attr( sanitize_title( $short_name ) );
-
-                ?>
-                <article class="entry">
-                    <div class="icon icon-<?php echo $short_name_sanitized; ?>"></div>
-                    <h3><a href="#"><?php echo esc_attr( $short_name ); ?></a></h3>
-                    <p class="oneliner"><?php echo esc_attr( get_post_meta( get_the_ID(), 'oneliner', true ) ); ?></p>
-                    <a href="<?php the_permalink(); ?>" class="button">Vergelijk</a>
-                </article>
-                <?php
-            endwhile; wp_reset_postdata();
+            $blocks = get_field( 'verzekeringen', 'option' );
+            if( ! empty( $blocks ) && is_array( $blocks ) ) :
+	            foreach ( $blocks as $block ) {
+		            $short_name = get_post_meta( $block['page']->ID, 'short_name', true );
+		            $short_name_sanitized = esc_attr( sanitize_title( $short_name ) );
+		            ?>
+		            <article class="entry">
+			            <div class="icon icon-<?php echo $short_name_sanitized; ?>"></div>
+			            <h3><a href="#"><?php echo esc_attr( $short_name ); ?></a></h3>
+			            <p class="oneliner"><?php echo esc_attr( get_post_meta( $block['page']->ID, 'oneliner', true ) ); ?></p>
+			            <a href="<?php echo get_permalink( $block->ID ); ?>" class="button">Vergelijk</a>
+		            </article>
+		            <?php
+                }
+            endif;
         ?>
     </div>
 </section>
