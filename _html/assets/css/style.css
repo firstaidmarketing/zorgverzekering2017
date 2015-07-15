@@ -1378,6 +1378,12 @@ em {
   font-style: italic;
 }
 
+hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px dashed #c6cbd2;
+}
+
 html, body {
   height: 100%;
   margin: 0;

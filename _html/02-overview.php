@@ -57,6 +57,7 @@
 					<p>
 					<strong>De autoverzekering die bij je past.</strong><br>
 					Hetzelfde geldt voor je autoverzekering. Neem je een verzekering die rekening houdt met een eventuele natuurramp, of kies je voor iets dat aansluit bij de leeftijd van je bolide? Misschien is je auto inmiddels wel een old-timer geworden. Een goed moment om te kijken welke autoverzekering nu het beste bij je past.</p>
+					<hr>
 					<p>
 					<strong>Snel en eenvoudig.</strong><br>
 					Wordt dit de eerste keer dat je een autoverzekering afsluit, of ben je gewoon nieuwsgierig of je kunt besparen op je maandelijkse uitgaven? Door een paar gegevens van jou en je auto in te vullen, zie je direct welke autoverzekering het meest voldoet aan jouw wensen. Geen verstand van auto’s of verzekeringen? Met onze “Hulp met kiezen” pagina heb je alle relevante informatie binnen handbereik.</p>
