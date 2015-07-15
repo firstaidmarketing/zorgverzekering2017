@@ -136,44 +136,10 @@ get_header(); ?>
             <p class="readall"><a href="<?php echo trailingslashit( get_home_url( null, 'nieuws' ) ); ?>" class="button">Alle items</a></p>
         </section>
 
-        <section class="widget widget-recent-reviews">
-            <h4>Laatste beoordelingen</h4>
-            <ul>
-                <li>
-                    <div class="side">
-                        4,4
-                    </div>
-                    <div class="text">
-                        <h3><a href="#">Complex en misleidend</a></h3>
-                        <p>De goedkopere Verrichtingen Polissen van Stadholland en DSW Zorgverzekeringen vergoeden, net als voo.. <a href="#" class="readmore">lees meer</a></p>
-                    </div>
-                </li>
-                <li>
-                    <div class="side">
-                        5,0
-                    </div>
-                    <div class="text">
-                        <h3><a href="#">Complex en misleidend</a></h3>
-                        <p>De goedkopere Verrichtingen Polissen van Stadholland en DSW Zorgverzekeringen vergoeden, net als voo.. <a href="#" class="readmore">lees meer</a></p>
-                    </div>
-                </li>
-                <li>
-                    <div class="side">
-                        2,0
-                    </div>
-                    <div class="text">
-                        <h3><a href="#">Complex en misleidend</a></h3>
-                        <p>De goedkopere Verrichtingen Polissen van Stadholland en DSW Zorgverzekeringen vergoeden, net als voo.. <a href="#" class="readmore">lees meer</a></p>
-                    </div>
-                </li>
-            </ul>
-
-            <p class="readall"><a href="#" class="button">Alle beoordelingen</a></p>
+        <section class="widget">
+            <h4>Over Keuze.nl</h4>
+	        <?php the_content(); ?>
         </section>
-
-        <article class="content">
-            <?php the_content(); ?>
-        </article>
     </div>  
 </section>
 	
