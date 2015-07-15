@@ -51,17 +51,19 @@
 			</aside>
 			<div class="right">
 				<div class="inner">
-					<h1>Autoverzekeringen vergelijken: Hoe kies je de juiste verzekering voor jouw auto?</h1>
-					<p>
-					Een auto koop je voor de lange termijn, en is een aanschaf die over de jaren met je meegroeit. In het prille begin ben je bang voor de kleinste kras, terwijl na 10 jaar die deuk in je deur niet eens meer opvalt.</p>
-					<p>
-					<strong>De autoverzekering die bij je past.</strong><br>
-					Hetzelfde geldt voor je autoverzekering. Neem je een verzekering die rekening houdt met een eventuele natuurramp, of kies je voor iets dat aansluit bij de leeftijd van je bolide? Misschien is je auto inmiddels wel een old-timer geworden. Een goed moment om te kijken welke autoverzekering nu het beste bij je past.</p>
-					<hr>
-					<p>
-					<strong>Snel en eenvoudig.</strong><br>
-					Wordt dit de eerste keer dat je een autoverzekering afsluit, of ben je gewoon nieuwsgierig of je kunt besparen op je maandelijkse uitgaven? Door een paar gegevens van jou en je auto in te vullen, zie je direct welke autoverzekering het meest voldoet aan jouw wensen. Geen verstand van auto’s of verzekeringen? Met onze “Hulp met kiezen” pagina heb je alle relevante informatie binnen handbereik.</p>
-					
+					<article class="post">
+						<h1>Autoverzekeringen vergelijken: Hoe kies je de juiste verzekering voor jouw auto?</h1>
+						<p>
+						Een auto koop je voor de <a href="">lange termijn</a>, en is een aanschaf die over de jaren met je meegroeit. In het prille begin ben je bang voor de kleinste kras, terwijl na 10 jaar die deuk in je deur niet eens meer opvalt.</p>
+						<h2>Test heading 2</h2>
+						<p>
+						<strong>De autoverzekering die bij je past.</strong><br>
+						Hetzelfde geldt voor je autoverzekering. Neem je een verzekering die rekening houdt met een eventuele natuurramp, of kies je voor iets dat aansluit bij de leeftijd van je bolide? Misschien is je auto inmiddels wel een old-timer geworden. Een goed moment om te kijken welke autoverzekering nu het beste bij je past.</p>
+						<hr>
+						<p>
+						<strong>Snel en eenvoudig.</strong><br>
+						Wordt dit de eerste keer dat je een autoverzekering afsluit, of ben je gewoon nieuwsgierig of je kunt besparen op je maandelijkse uitgaven? Door een paar gegevens van jou en je auto in te vullen, zie je direct welke autoverzekering het meest voldoet aan jouw wensen. Geen verstand van auto’s of verzekeringen? Met onze “Hulp met kiezen” pagina heb je alle relevante informatie binnen handbereik.</p>
+					</article>
 				</div>
 			</div>
 		</section>

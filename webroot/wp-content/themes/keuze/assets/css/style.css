@@ -1410,7 +1410,7 @@ body.wp-autoresize {
   display: table;
   clear: both;
 }
-@media screen and (max-width: 1520px) {
+@media screen and (max-width: 1000px) {
   .wrapper {
     padding-left: 10px;
     padding-right: 10px;
@@ -1434,7 +1434,7 @@ body.wp-autoresize {
   margin-left: auto;
   margin-right: auto;
   width: auto;
-  max-width: 1520px;
+  max-width: 1000px;
   margin-left: 0;
   margin-right: 0;
   padding: 2.3rem;
@@ -1699,7 +1699,7 @@ figure.alignright {
   text-align: right;
   border-left: 1px solid #ececec;
 }
-@media screen and (max-width: 1520px) {
+@media screen and (max-width: 1000px) {
   .header-nav .trust {
     border-left: 0;
     padding-left: 0;
@@ -1726,7 +1726,7 @@ figure.alignright {
 #footer .outer-wrapper {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1520px;
+  max-width: 1000px;
 }
 #footer .left,
 #footer .right {
@@ -1740,7 +1740,7 @@ figure.alignright {
     width: 100%;
   }
 }
-@media screen and (min-width: 1520px) {
+@media screen and (min-width: 1000px) {
   #footer .right {
     padding-left: 60px;
   }
@@ -1793,7 +1793,7 @@ figure.alignright {
 .nav-main .sf-menu {
   margin-left: 60px;
 }
-@media screen and (max-width: 1520px) {
+@media screen and (max-width: 1000px) {
   .nav-main .sf-menu {
     margin-left: 0;
   }
@@ -1828,7 +1828,7 @@ figure.alignright {
   background-position: right 3px;
   background-repeat: no-repeat;
 }
-@media screen and (max-width: 1520px) {
+@media screen and (max-width: 1000px) {
   .nav-main .sf-menu li a {
     padding-left: 20px;
     padding-right: 20px;
@@ -1852,7 +1852,7 @@ figure.alignright {
 .nav-main .sf-menu li.home a:hover {
   background-position: 30px -142px;
 }
-@media screen and (max-width: 1520px) {
+@media screen and (max-width: 1000px) {
   .nav-main .sf-menu li.home a {
     background-position: 20px -52px;
   }
@@ -2377,9 +2377,6 @@ table td {
   display: block;
   margin-right: 5.26316%;
   width: 36.84211%;
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 46px;
   line-height: 4.6rem;
 }
 #form-tabs .panels .tab .form label:last-child {
@@ -2399,6 +2396,41 @@ table td {
 #form-tabs .panels .tab .form input[type=date]:last-child,
 #form-tabs .panels .tab .form select:last-child {
   margin-right: 0;
+}
+#form-tabs .panels .tab .form input.date,
+#form-tabs .panels .tab .form input.huisnr,
+#form-tabs .panels .tab .form input.zipcode {
+  float: none;
+  display: inline-block;
+  width: 55px;
+  margin-right: 10px;
+  padding-right: 5px;
+}
+#form-tabs .panels .tab .form input.date:nth-child(2n),
+#form-tabs .panels .tab .form input.huisnr:nth-child(2n),
+#form-tabs .panels .tab .form input.zipcode:nth-child(2n) {
+  margin-right: 2.12766%;
+}
+#form-tabs .panels .tab .form input.date:nth-child(2n+1),
+#form-tabs .panels .tab .form input.huisnr:nth-child(2n+1),
+#form-tabs .panels .tab .form input.zipcode:nth-child(2n+1) {
+  clear: none;
+}
+#form-tabs .panels .tab .form input.date-y,
+#form-tabs .panels .tab .form input.huisnr-y,
+#form-tabs .panels .tab .form input.zipcode-y {
+  width: 80px;
+  margin-right: 0;
+}
+#form-tabs .panels .tab .form input.date.zipcode,
+#form-tabs .panels .tab .form input.huisnr.zipcode,
+#form-tabs .panels .tab .form input.zipcode.zipcode {
+  width: 170px;
+}
+#form-tabs .panels .tab .form input.date.huisnr-nr,
+#form-tabs .panels .tab .form input.huisnr.huisnr-nr,
+#form-tabs .panels .tab .form input.zipcode.huisnr-nr {
+  width: 100px;
 }
 #form-tabs .panels .tab .form .description {
   clear: both;
@@ -2666,8 +2698,13 @@ table td {
 }
 
 article.post h2 {
+  margin-bottom: 1.15rem;
   line-height: 1.5em;
   font-weight: bold;
+  color: #6e8faf;
+}
+article.post a {
+  text-decoration: underline;
 }
 article.post ul, article.post ol {
   margin-left: 30px;

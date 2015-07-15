@@ -5,8 +5,6 @@ var _footer = $('#footer');
 var _headerBottomPos = _header.outerHeight();
 var _mobileNavHolder = $('.mobile-nav-holder');
 var _sidebarNav = $('#sidebar-nav');
-var sidebarNavBottom = _sidebarNav.offset().top + _sidebarNav.outerHeight();
-console.log( sidebarNavBottom );
 var _searchForm = $('.searchform');
 var _activeMenuItem = $('.nav-main .current-menu-item, .nav-main .current-menu-ancestor');
 
@@ -88,12 +86,18 @@ jQuery(document).ready(function($) {
     // Scroll to internal anchor tags
     $('aside.left a[href*=#]').on('click',function (e) {
         var target = this.hash;
-        console.log( target );
         if( target != '' && typeof target != 'undefined' ) {
             e.preventDefault();
             keuze.scrollToHash( target );
         }
     });
+
+	// Disabled jump to hash on compare pages
+	if( location.hash && location.hash == 'vergelijken' ) {
+		setTimeout(function() {
+			window.scrollTo(0, 0);
+		}, 1);
+	}
 
 	// Floating navigation
 	_window.scroll( function() {
@@ -106,6 +110,11 @@ jQuery(document).ready(function($) {
         _header.css('top', $('#wpadminbar').height() + 'px' );
         //_body.css('padding-top', ( parseInt( _body.css('padding-top') ) + $('#wpadminbar').height() ) + 'px' );
     }
+
+	// Auto tab date fields
+	$('.field-date .date').autotab({
+		format: 'numeric'
+	});
 
 });
 

@@ -1,4 +1,4 @@
-<form action="" method="post">
+<form action="" method="get">
     <p>
         <label for="auto-kenteken">Je kenteken</label>
         <input type="text" id="auto-kenteken" name="kenteken" class="kenteken">

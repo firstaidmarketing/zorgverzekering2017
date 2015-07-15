@@ -26,8 +26,14 @@
 
 article.post {
 	h2 {
+		margin-bottom: rhythm(0.5);
 		line-height: 1.5em;
 		font-weight: bold;
+		color: #6e8faf;
+	}
+	
+	a {
+		text-decoration: underline;
 	}
 
 	ul, ol {

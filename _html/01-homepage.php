@@ -9,19 +9,17 @@
 		    <ul class="nav">
 		        <li><a href="#tab-auto">Auto</a></li>
 		        <li><a href="#tab-zorg">Zorg</a></li>
-		        <li><a href="#tab-reis">Reis</a></li>
 		        <li><a href="#tab-inboedel">Inboedel</a></li>
 		        <li><a href="#tab-recht">Recht</a></li>
-		        <li><a href="#tab-uitvaart">Uitvaart</a></li>
 		        <li><a href="#tab-energie">Energie</a></li>
-		        <li><a href="#tab-mobiel">Mobiel</a></li>
+		        <li><a href="#tab-mobiel">Sim-Only</a></li>
 		    </ul>
 
 		    <div class="panels">
 			    <div class="tab" id="tab-auto">
 			    	<h2>Autoverzekering vergelijken</h2>
 			    	<div class="form">
-				    	<form action="" method="post">
+				    	<form action="" method="get">
 				    		<p>
 				    			<label for="auto-kenteken">Je kenteken</label>
 				    			<input type="text" id="auto-kenteken" name="kenteken" class="kenteken">
@@ -67,22 +65,27 @@
 			    <div class="tab" id="tab-zorg">
 			    	<h2>zorg tab</h2>
 			    	<div class="form">
-			    		<form action="" method="post">
-
-			    		</form>
-			    	</div>
-			    	<div class="text">
-			    		<p>
-			    			<strong>Een titeltje</strong><br>
-			    			Wordt dit de eerste keer dat je een autoverzekering afsluit, of ben je gewoon nieuwsgierig of je kunt besparen op je maandelijkse uitgaven? Door een paar gegevens van jou en je auto in te vullen, zie je direct welke autoverzekering het meest voldoet aan jouw wensen.
-			    		</p>
-			    	</div>
-			    </div>
-			    <div class="tab" id="tab-reis">
-			    	<h2>reis tab</h2>
-			    	<div class="form">
-			    		<form action="" method="post">
-
+			    		<form action="" method="get">
+						    <p class="field-date">
+							    <label for="zorg-geboortedatum">Geboortedatum</label>
+							    <input type="number" class="date date-d" maxlength="2" min="1" max="31" placeholder="01">
+							    <input type="number" class="date date-m" maxlength="2" min="1" max="12" placeholder="01">
+							    <input type="number" class="date date-y" maxlength="4" min="1900" max="" placeholder="1980">
+						    </p>
+						    <p>
+							    <label for="zorg-eigenrisico">Eigen risico</label>
+							    <select name="" id="zorg-eigenrisico">
+								    <option value="375">€ 375,-</option>
+								    <option value="475">€ 475,-</option>
+								    <option value="575">€ 575,-</option>
+								    <option value="675">€ 675,-</option>
+								    <option value="775">€ 775,-</option>
+								    <option value="875">€ 875,-</option>
+							    </select>
+						    </p>
+						    <p class="buttons">
+							    <input type="submit" class="button" value="Direct vergelijken">
+						    </p>
 			    		</form>
 			    	</div>
 			    	<div class="text">
@@ -95,8 +98,51 @@
 			    <div class="tab" id="tab-inboedel">
 			    	<h2>inboedel tab</h2>
 			    	<div class="form">
-			    		<form action="" method="post">
-
+			    		<form action="" method="get">
+						    <p>
+							    <label for="">Aantal personen</label>
+							    <select name="" id="">
+								    <option value="">1 persoon verzekerd</option>
+								    <option value="">2 personen verzekerd</option>
+								    <option value="">Gezin verzekerd</option>
+							    </select>
+						    </p>
+						    <p>
+							    <label for="">Huurder of eigenaar</label>
+							    <select name="" id="">
+								    <option value="">Eigenaar</option>
+								    <option value="">Huurder</option>
+							    </select>
+						    </p>
+						    <p>
+							    <label for="">Soort woning</label>
+							    <select name="soortwoning" id="">
+								    <option value="6tussenwoning" class="icon-ok">Tussenwoning</option>
+								    <option value="7flat" class="icon-ok">Flat / appartement / etage</option>
+								    <option value="82onder1kap" class="icon-ok">2 onder 1 kap</option>
+								    <option value="9hoekwoning" class="icon-ok">Hoekwoning</option>
+								    <option value="10vrijstaand" class="icon-ok">Vrijstaand / Herenhuis</option>
+							    </select>
+						    </p>
+						    <p>
+							    <label for="">Beveiliging</label>
+							    <select name="" id="">
+								    <option value="">Niet beveiligd</option>
+								    <option value="">Elektronisch</option>
+								    <option value="">Bouwkundig</option>
+								    <option value="">Elektronisch en bouwkundig</option>
+							    </select>
+						    </p>
+						    <p>
+							    <label for="">Soort dak</label>
+							    <select name="" id="">
+								    <option value="">Dakpannen / overig</option>
+								    <option value="">Riet</option>
+							    </select>
+						    </p>
+						    <p class="buttons">
+							    <input type="submit" class="button" value="Direct vergelijken">
+						    </p>
 			    		</form>
 			    	</div>
 			    	<div class="text">
@@ -109,22 +155,42 @@
 			    <div class="tab" id="tab-recht">
 			    	<h2>recht tab</h2>
 			    	<div class="form">
-			    		<form action="" method="post">
-
-			    		</form>
-			    	</div>
-			    	<div class="text">
-			    		<p>
-			    			<strong>Een titeltje</strong><br>
-			    			Wordt dit de eerste keer dat je een autoverzekering afsluit, of ben je gewoon nieuwsgierig of je kunt besparen op je maandelijkse uitgaven? Door een paar gegevens van jou en je auto in te vullen, zie je direct welke autoverzekering het meest voldoet aan jouw wensen.
-			    		</p>
-			    	</div>
-			    </div>
-			    <div class="tab" id="tab-uitvaart">
-			    	<h2>uitvaart tab</h2>
-			    	<div class="form">
-			    		<form action="" method="post">
-
+			    		<form action="" method="get">
+						    <p>
+							    <label for="">Consument en wonen</label>
+							    <select name="" id="">
+								    <option value="">Wel verzekerd</option>
+								    <option value="">Niet verzekerd</option>
+							    </select>
+						    </p>
+						    <p>
+							    <label for="">Verkeer en medisch</label>
+							    <select name="" id="">
+								    <option value="">Wel verzekerd</option>
+								    <option value="">Niet verzekerd</option>
+							    </select>
+						    </p>
+						    <p>
+							    <label for="">Werk en inkomen</label>
+							    <select name="" id="">
+								    <option value="">Wel verzekerd</option>
+								    <option value="">Niet verzekerd</option>
+							    </select>
+						    </p>
+						    <p>
+							    <label for="">Belasting en vermogen</label>
+							    <select name="" id="">
+								    <option value="">Wel verzekerd</option>
+								    <option value="">Niet verzekerd</option>
+							    </select>
+						    </p>
+						    <p>
+							    <label for="">Echtscheiding</label>
+							    <select name="" id="">
+								    <option value="">Wel verzekerd</option>
+								    <option value="">Niet verzekerd</option>
+							    </select>
+						    </p>
 			    		</form>
 			    	</div>
 			    	<div class="text">
@@ -137,8 +203,35 @@
 			    <div class="tab" id="tab-energie">
 			    	<h2>energie tab</h2>
 			    	<div class="form">
-			    		<form action="" method="post">
-
+			    		<form action="" method="get">
+						    <p class="field-zipcode">
+							    <label for="">Postcode</label>
+							    <input type="text" class="zipcode" name="" placeholder="3521 AT">
+						    </p>
+						    <p class="field-huisnnr">
+							    <label for="">Huisnummer + toevoeging</label>
+							    <input type="number" class="huisnr huisnr-nr" name="" placeholder="Bijv 1">
+							    <input type="text" class="huisnr huisnr-nadd" name="" placeholder="">
+						    </p>
+						    <p>
+							    <label for="">Type meter</label>
+							    <select name="">
+								    <option value="">Enkele meter</option>
+								    <option value="">Dubbele meter</option>
+							    </select>
+						    </p>
+						    <p>
+							    <label for="">Schatting verbruik</label>
+							    <select name="">
+								    <option value="">Eenpersoons huishouden</option>
+								    <option value="">Tweepersoons huishouden</option>
+								    <option value="">Gezin met 3 personen</option>
+								    <option value="">Gezin met 4+ personen</option>
+							    </select>
+						    </p>
+						    <p class="buttons">
+							    <input type="submit" class="button" value="Direct vergelijken">
+						    </p>
 			    		</form>
 			    	</div>
 			    	<div class="text">
@@ -151,8 +244,58 @@
 			    <div class="tab" id="tab-mobiel">
 			    	<h2>mobiel tab</h2>
 			    	<div class="form">
-			    		<form action="" method="post">
-
+			    		<form action="" method="get">
+						    <p>
+							    <label for="">Belminuten</label>
+							    <select name="minuten" id="minuten">
+								    <option value="0">0 minuten</option>
+								    <option value="50">50 minuten</option>
+								    <option value="100" selected="selected">100 minuten</option>
+								    <option value="150">150 minuten</option>
+								    <option value="200">200 minuten</option>
+								    <option value="300">300 minuten</option>
+								    <option value="400">400 minuten</option>
+								    <option value="500">500 minuten</option>
+								    <option value="600">600 minuten</option>
+								    <option value="700">700 minuten</option>
+								    <option value="800">800 minuten</option>
+								    <option value="1000">1000 minuten</option>
+								    <option value="1500">1500 minuten</option>
+								    <option value="1501">&gt; 1500 minuten</option>
+							    </select>
+						    </p>
+						    <p>
+							    <label for="">SMS</label>
+							    <select name="sms" id="sms">
+								    <option value="0" selected="selected">0 smsjes</option>
+								    <option value="50">50 smsjes</option>
+								    <option value="100">100 smsjes</option>
+								    <option value="200">200 smsjes</option>
+								    <option value="300">300 smsjes</option>
+								    <option value="400">400 smsjes</option>
+								    <option value="500">500 smsjes</option>
+								    <option value="1000">1000 smsjes</option>
+								    <option value="1500">1500 smsjes</option>
+								    <option value="2000">2000 smsjes</option>
+								    <option value="2001">&gt; 2000 smsjes</option>
+							    </select>
+						    </p>
+						    <p>
+							    <label for="">Mobiele Internet MB's</label>
+							    <select name="data" id="data">
+								    <option value="0" selected="selected">0 MB</option>
+								    <option value="200">200 MB</option>
+								    <option value="500">500 MB</option>
+								    <option value="1000">1000 MB</option>
+								    <option value="1500">1500 MB</option>
+								    <option value="2000">2000 MB</option>
+								    <option value="2500">2500 MB</option>
+								    <option value="2501">&gt; 2500MB</option>
+							    </select>
+						    </p>
+						    <p class="buttons">
+							    <input type="submit" class="button" value="Direct vergelijken">
+						    </p>
 			    		</form>
 			    	</div>
 			    	<div class="text">

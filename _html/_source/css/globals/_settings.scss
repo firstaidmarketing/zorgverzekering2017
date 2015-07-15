@@ -14,7 +14,7 @@ $max-width: 1154px;
 $fg-column: $column;
 $fg-gutter: $gutter;
 $max-width: 1154px;
-$outer-max-width: 1520px;
+$outer-max-width: 1000px;
 
 // Define your breakpoints
 $large: new-breakpoint( min-width $outer-max-width 12 );

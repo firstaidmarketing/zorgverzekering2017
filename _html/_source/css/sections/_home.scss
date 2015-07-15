@@ -101,13 +101,37 @@
 				}
 				label {
 					@include span-columns( 2 of 5 );
-					@include change-font-size(18px);
+					line-height: 4.6rem;
 				}
 				input[type=text],
 				input[type=number],
 				input[type=date],
 				select {
 					@include span-columns( 3 of 5 );
+				}
+
+				input.date,
+				input.huisnr,
+				input.zipcode {
+					@include omega-reset(2n);
+					float: none;
+					display: inline-block;
+					width: 55px;
+					margin-right: 10px;
+					padding-right: 5px;
+
+					&-y {
+						width: 80px;
+						margin-right: 0;
+					}
+
+					&.zipcode {
+						width: 170px;
+					}
+
+					&.huisnr-nr {
+						width: 100px;
+					}
 				}
 
 				.description {
