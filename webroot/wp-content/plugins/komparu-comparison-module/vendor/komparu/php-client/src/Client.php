@@ -47,6 +47,7 @@ class Client {
      */
     public function __construct(ClientInterface $client) {
         $this->client = $client;
+        $this->client->setDefaultOption('config', ['curl' => ['CURLOPT_HTTP_VERSION' => 1]]);
         $this->resource = $this->defaultResource;
 
         // First add the server domain. This can be overridden using
@@ -306,13 +307,13 @@ class Client {
 
             default:
                 $this->throwError($response);
-                exit;
+                return false;
         }
     }
 
     protected function throwError($response)
     {
-        if (strpos($_SERVER['HTTP_HOST'], '.komparu.dev') !== FALSE || strpos($_SERVER['HTTP_HOST'], '.komparu.test') !== FALSE || !class_exists('\Log')) {
+        if (isset($_SERVER['HTTP_HOST']) && ( strpos($_SERVER['HTTP_HOST'], '.komparu.dev') !== FALSE || strpos($_SERVER['HTTP_HOST'], '.komparu.test') !== FALSE) ) {
             file_put_contents('errorapi.html', $response->getBody());
             echo "<html><head><title>" . $response->getReasonPhrase() . "</title><link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>"
                  . "<style>*{font-family:'Open Sans', Arial;color:#333;}#trace{padding:1em;border-radius:5px;background:#fff;opacity:.9;}#trace p{line-height:1.5em;padding:.5em 1em;margin:0;}"
@@ -324,7 +325,7 @@ class Client {
             echo "</div></body></html>";
             exit;
         }
-        else
+        elseif (class_exists('\Log'))
         {
             \Log::error($response->getBody());
         }
@@ -332,8 +333,9 @@ class Client {
 
     /**
      * @param string $method
-     * @param mixed $param
+     * @param $params
      * @return $this
+     * @internal param mixed $param
      */
     public function __call($method, $params) {
         $this->params[$method] = current($params);
