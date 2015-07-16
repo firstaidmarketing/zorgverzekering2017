@@ -1,4 +1,4 @@
-<form action="" method="get">
+<form action="<?php echo get_home_url( null, 'sim/' ); ?>#vergelijken" method="get">
     <p>
         <label for="mobiel-minuten">Belminuten</label>
         <select name="f[minutes]" id="mobiel-minuten">

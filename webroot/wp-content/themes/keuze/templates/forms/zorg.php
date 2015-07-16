@@ -1,4 +1,4 @@
-<form action="<?php echo get_home_url( null, 'zorgverzekering/' ); ?>" method="get">
+<form action="<?php echo get_home_url( null, 'zorgverzekering/' ); ?>#vergelijken" method="get">
 	<p class="field-date">
 		<label for="zorg-geboortedatum">Geboortedatum</label>
 		<input type="number" class="date date-d" maxlength="2" min="1" max="31" placeholder="01">

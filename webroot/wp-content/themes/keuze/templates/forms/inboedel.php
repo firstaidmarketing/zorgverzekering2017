@@ -1,4 +1,4 @@
-<form action="<?php echo get_home_url( null, 'inboedelverzekering/' ); ?>" method="get">
+<form action="<?php echo get_home_url( null, 'inboedelverzekering/' ); ?>#vergelijken" method="get">
     <p>
         <label for="personal_circumstances">Gezinssamenstelling</label>
         <select id="personal_circumstances" name="f[personal_circumstances]">

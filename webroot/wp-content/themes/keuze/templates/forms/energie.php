@@ -1,4 +1,4 @@
-<form action="" method="get">
+<form action="<?php echo get_home_url( null, 'energie/' ); ?>#vergelijken" method="get">
     <p class="field-zipcode">
         <label for="energie-postcode">Postcode</label>
         <input type="text" id="energie-postcode" name="f[postal_code]" placeholder="3521 AT">
