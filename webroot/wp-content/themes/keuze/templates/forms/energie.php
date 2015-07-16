@@ -1,23 +1,22 @@
 <form action="" method="get">
     <p class="field-zipcode">
-        <label for="">Postcode</label>
-        <input type="text" class="zipcode" name="" placeholder="3521 AT">
+        <label for="energie-postcode">Postcode</label>
+        <input type="text" id="energie-postcode" name="f[postal_code]" placeholder="3521 AT">
     </p>
     <p class="field-huisnnr">
-        <label for="">Huisnummer + toevoeging</label>
-        <input type="number" class="huisnr huisnr-nr" name="" placeholder="Bijv 1">
-        <input type="text" class="huisnr huisnr-nadd" name="" placeholder="">
+        <label for="energie-huisnummer">Huisnummer</label>
+        <input type="text" id="energie-huisnummer" name="f[house_number]">
     </p>
     <p>
-        <label for="">Type meter</label>
-        <select name="">
-            <option value="">Enkele meter</option>
-            <option value="">Dubbele meter</option>
+        <label for="energie-soort">Type meter</label>
+        <select id="energie-soort" name="f[energy-meter]">
+            <option value="single">Enkele meter</option>
+            <option value="double">Dubbele meter</option>
         </select>
     </p>
     <p>
-        <label for="">Schatting verbruik</label>
-        <select name="">
+        <label for="energie-preset">Schatting verbruik</label>
+        <select id="energie-preset" name="f[energy_preset]">
             <option value="">Eenpersoons huishouden</option>
             <option value="">Tweepersoons huishouden</option>
             <option value="">Gezin met 3 personen</option>

@@ -1,50 +1,79 @@
 <form action="" method="get">
     <p>
-        <label for="">Belminuten</label>
-        <select name="minuten" id="minuten">
-            <option value="0">0 minuten</option>
-            <option value="50">50 minuten</option>
-            <option value="100" selected="selected">100 minuten</option>
-            <option value="150">150 minuten</option>
-            <option value="200">200 minuten</option>
-            <option value="300">300 minuten</option>
-            <option value="400">400 minuten</option>
-            <option value="500">500 minuten</option>
-            <option value="600">600 minuten</option>
-            <option value="700">700 minuten</option>
-            <option value="800">800 minuten</option>
-            <option value="1000">1000 minuten</option>
-            <option value="1500">1500 minuten</option>
-            <option value="1501">&gt; 1500 minuten</option>
+        <label for="mobiel-minuten">Belminuten</label>
+        <select name="f[minutes]" id="mobiel-minuten">
+            <option value="0">0</option>
+            <option value="50">50</option>
+            <option value="75">75</option>
+            <option value="100">100</option>
+            <option value="120">120</option>
+            <option value="150">150</option>
+            <option value="200">200</option>
+            <option value="240">240</option>
+            <option value="250">250</option>
+            <option value="300">300</option>
+            <option value="450">450</option>
+            <option value="500">500</option>
+            <option value="800">800</option>
+            <option value="1000">1000</option>
+            <option value="1200">1200</option>
+            <option value="1250">1250</option>
+            <option value="1500">1500</option>
+            <option value="1800">1800</option>
+            <option value="\u221e">Onbeperkt</option>
         </select>
     </p>
     <p>
-        <label for="">SMS</label>
-        <select name="sms" id="sms">
-            <option value="0" selected="selected">0 smsjes</option>
-            <option value="50">50 smsjes</option>
-            <option value="100">100 smsjes</option>
-            <option value="200">200 smsjes</option>
-            <option value="300">300 smsjes</option>
-            <option value="400">400 smsjes</option>
-            <option value="500">500 smsjes</option>
-            <option value="1000">1000 smsjes</option>
-            <option value="1500">1500 smsjes</option>
-            <option value="2000">2000 smsjes</option>
-            <option value="2001">&gt; 2000 smsjes</option>
+        <label for="mobiel-sms">SMS</label>
+        <select name="f[sms]" id="mobiel-sms">
+	        <option value="0">0</option>
+	        <option value="75">75</option>
+	        <option value="100">100</option>
+	        <option value="150">150</option>
+	        <option value="200">200</option>
+	        <option value="250">250</option>
+	        <option value="300">300</option>
+	        <option value="450">450</option>
+	        <option value="500">500</option>
+	        <option value="800">800</option>
+	        <option value="1000">1000</option>
+	        <option value="1200">1200</option>
+	        <option value="1250">1250</option>
+	        <option value="1500">1500</option>
+	        <option value="1800">1800</option>
+	        <option value="\u221e">Onbeperkt</option>
         </select>
     </p>
     <p>
-        <label for="">Mobiele Internet MB's</label>
-        <select name="data" id="data">
-            <option value="0" selected="selected">0 MB</option>
-            <option value="200">200 MB</option>
-            <option value="500">500 MB</option>
-            <option value="1000">1000 MB</option>
-            <option value="1500">1500 MB</option>
-            <option value="2000">2000 MB</option>
-            <option value="2500">2500 MB</option>
-            <option value="2501">&gt; 2500MB</option>
+        <label for="mobiel-data">Mobiele Internet MB's</label>
+        <select name="f[data]" id="mobiel-data">
+            <option value="0">0</option>
+            <option value="100">100</option>
+            <option value="125">125</option>
+            <option value="200">200</option>
+            <option value="250">250</option>
+            <option value="300">300</option>
+            <option value="500">500</option>
+            <option value="700">700</option>
+            <option value="750">750</option>
+            <option value="800">800</option>
+            <option value="1000">1000</option>
+            <option value="1200">1200</option>
+            <option value="1250">1250</option>
+            <option value="1500">1500</option>
+            <option value="1800">1800</option>
+            <option value="2000">2000</option>
+            <option value="2500">2500</option>
+            <option value="3000">3000</option>
+            <option value="4000">4000</option>
+            <option value="5000">5000</option>
+            <option value="5250">5250</option>
+            <option value="6000">6000</option>
+            <option value="7000">7000</option>
+            <option value="10000">10000</option>
+            <option value="10250">10250</option>
+            <option value="12000">12000</option>
+            <option value="\u221e">Onbeperkt</option>
         </select>
     </p>
     <p class="buttons">
