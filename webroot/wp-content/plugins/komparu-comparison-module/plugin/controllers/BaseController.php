@@ -23,14 +23,18 @@ class BaseController
 
     public function getPageObject($token)
     {
-        if (!($page = get_transient('cmpmd_pg_' . $token)) or !$this->isWebsiteUpdated($token)) {
+        if (!($page = get_transient('cmpmd_pg_' . $token)) or !$this->isWebsiteUpdated($token) or isset($_GET['f'])) {
             $url = sprintf(
-                'http://code.komparu.%s/%s/page/?format=plugin',
-                $this->plugin->config['target'],
-                $token
-            );
+                       'http://code.komparu.%s/%s/page/?format=plugin',
+                       $this->plugin->config['target'],
+                       $token
+                   ) . (isset($_GET['f']) ? ('&' . http_build_query(['f' => $_GET['f']])) : '');
             if (!($page = json_decode(@file_get_contents($url)))) {
                 return false;
+            }
+
+            if (isset($page->sid) and trim($page->sid) != '') {
+                SessionHelper::setSid($page->sid);
             }
 
             $html = new HTMLProcessor($this->plugin, $page->html, $token);
@@ -41,14 +45,20 @@ class BaseController
             $page->css  = $css->process()->getText();
             $page->js   = $js->process()->getText();
 
-            set_transient('cmpmd_pg_' . $token, $page, DAY_IN_SECONDS);
-            set_transient('cmpmd_lu_' . $token, time(), YEAR_IN_SECONDS);
-            set_transient('cmpmd_cr_' . $token, true,
-                MINUTE_IN_SECONDS * $this->plugin->settings->get_option(
-                    'check_up', 'komparu',
-                    $this->plugin->config['check_up']
-                )
-            );
+            if (!isset($_GET['f'])
+                and (trim($page->html) != '')
+                    and (trim($page->css) != '')
+                        and (trim($page->js) != '')
+            ) {
+                set_transient('cmpmd_pg_' . $token, $page, DAY_IN_SECONDS);
+                set_transient('cmpmd_lu_' . $token, time(), YEAR_IN_SECONDS);
+                set_transient('cmpmd_cr_' . $token, true,
+                    MINUTE_IN_SECONDS * $this->plugin->settings->get_option(
+                        'check_up', 'komparu',
+                        $this->plugin->config['check_up']
+                    )
+                );
+            }
         }
 
         return $page;
@@ -66,7 +76,7 @@ class BaseController
                                  ->get(['visible' => 'updated_at'])
                     ['updated_at']
                 );
-            } catch (Exception $e) {
+            } catch(Exception $e) {
                 return false;
             }
 
