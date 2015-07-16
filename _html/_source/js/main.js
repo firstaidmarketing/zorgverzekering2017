@@ -93,7 +93,7 @@ jQuery(document).ready(function($) {
     });
 
 	// Disabled jump to hash on compare pages
-	if( location.hash && location.hash == 'vergelijken' ) {
+	if( location.hash && location.hash == '#vergelijken' ) {
 		setTimeout(function() {
 			window.scrollTo(0, 0);
 		}, 1);
