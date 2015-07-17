@@ -1,9 +1,9 @@
 <form action="<?php echo get_home_url( null, 'zorgverzekering/' ); ?>#vergelijken" method="get">
 	<p class="field-date">
 		<label for="zorg-geboortedatum">Geboortedatum</label>
-		<input type="number" class="date date-d" maxlength="2" min="1" max="31" placeholder="01">
-		<input type="number" class="date date-m" maxlength="2" min="1" max="12" placeholder="01">
-		<input type="number" class="date date-y" maxlength="4" min="1900" max="" placeholder="1980">
+		<input type="number" id="zorg-geboortedatum" name="healthcare-personal[birthday][0][0]" class="date date-d" maxlength="2" min="1" max="31" placeholder="01">
+		<input type="number" name="healthcare-personal[birthday][0][1]" class="date date-m" maxlength="2" min="1" max="12" placeholder="01">
+		<input type="number" name="healthcare-personal[birthday][0][2]" class="date date-y" maxlength="4" min="1900" max="" placeholder="1980">
 	</p>
 	<p>
 		<label for="zorg-eigenrisico">Eigen risico</label>

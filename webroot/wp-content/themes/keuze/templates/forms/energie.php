@@ -17,10 +17,11 @@
     <p>
         <label for="energie-preset">Schatting verbruik</label>
         <select id="energie-preset" name="f[energy_preset]">
-            <option value="">Eenpersoons huishouden</option>
-            <option value="">Tweepersoons huishouden</option>
-            <option value="">Gezin met 3 personen</option>
-            <option value="">Gezin met 4+ personen</option>
+            <option value="single">Single</option>
+            <option value="duo">Tweepersoons huishouden</option>
+            <option value="family">Klein gezin</option>
+            <option value="medium">Gezin</option>
+            <option value="large">Groot gezin</option>
         </select>
     </p>
     <p class="buttons">
