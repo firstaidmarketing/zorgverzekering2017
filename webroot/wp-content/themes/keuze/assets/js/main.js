@@ -66,10 +66,7 @@ jQuery(document).ready(function($) {
     $('#overview-tabs').responsiveTabs({
         startCollapsed: false,
         collapse: false,
-        animation: 'none',
-        activate: function () {
-            $(window).trigger('resize');
-        }
+        animation: 'none'
     }).find('.nav-tab').appendTo( $('#overview-tabs .top .right') );
 
     // Accordion
