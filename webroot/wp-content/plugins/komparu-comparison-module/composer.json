@@ -6,7 +6,6 @@
   "require": {
     "composer/installers": "1.0.*",
     "twig/twig": "1.16.*",
-    "illuminate/database": "4.2.*",
     "komparu/php-client": "dev-master"
   },
   "autoload": {

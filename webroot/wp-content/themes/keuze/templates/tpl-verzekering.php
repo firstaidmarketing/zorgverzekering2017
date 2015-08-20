@@ -19,6 +19,7 @@ get_header(); ?>
 
 	<div class="results">
 		<section id="vergelijken" class="tab">
+			<div class="comparehow"><a href="/keuze-nl/zo-werkt-keuze-nl/">Lees hier hoe wij onze vergelijking maken</a></div>
 			<?php 
 				$komparu_script = get_field( 'komparu_script' );
 				$content = do_shortcode( $komparu_script );

@@ -26,31 +26,31 @@ class AdminController extends BaseController
         ]);
     }
 
-    public function clear($token)
+    public function clear($token = '')
     {
-        $GLOBALS['wpdb']->get_results(sprintf(
-            'delete from `%soptions` where `option_name` like "%%cmpmd%%%s%%"',
-            $GLOBALS['wpdb']->prefix,
-            $token
-        ));
+        $this->clearCache($token);
 
-        (new GuzzleHttp\Client())->get(sprintf(
-            'http://code.komparu.%s/%s?__reset=&format=plugin',
-            $this->plugin->config['target'],
-            $token
-        ));
-
-        exit();
+        if ($token != '') {
+            (new GuzzleHttp\Client())->get(sprintf(
+                'http://code.komparu.%s/%s?__reset=&format=plugin',
+                $this->plugin->config['target'],
+                $token
+            ));
+        }
     }
 
     public function delete()
     {
+        add_filter('posts_where', function ($where) {
+            return $where . ' AND (' . $GLOBALS['wpdb']->posts . '.guid LIKE "%uploads/compmodule%") ';
+        }, 10, 2);
+
         $q = new WP_Query([
-            'guid'           => '%uploads/compmodule%',
             'post_type'      => 'attachment',
             'post_status'    => 'inherit',
             'posts_per_page' => 9999,
         ]);
+
         while ($attachment = $q->next_post()) {
             wp_delete_attachment($attachment->ID);
             try {
@@ -59,5 +59,17 @@ class AdminController extends BaseController
             }
         }
 
+        $this->clearCache();
+    }
+
+    protected function clearCache($token = '')
+    {
+        /** @var wpdb $wpdb */
+        $wpdb = $GLOBALS['wpdb'];
+        $wpdb->get_results(sprintf(
+            'DELETE FROM `%soptions` WHERE `option_name` LIKE "%%cmpmd%%%s%%"',
+            $GLOBALS['wpdb']->prefix,
+            $token
+        ));
     }
 }

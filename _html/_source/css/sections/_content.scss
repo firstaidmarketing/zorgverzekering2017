@@ -48,3 +48,12 @@ article.post {
 		list-style-type: decimal;
 	}
 }
+
+.comparehow {
+	@extend %small-font-size;
+	background: $midgrey;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	margin: rhythm(1);
+	padding: rhythm(0.5);
+}

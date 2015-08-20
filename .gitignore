@@ -11,9 +11,9 @@ node_modules
 config.codekit
 npm-debug.log
 
-.vagrant
-/puphpet/files/dot/ssh/*
-!/puphpet/files/dot/ssh/insecure_private_key
+/vagrant/.vagrant
+/vagrant//puphpet/files/dot/ssh/*
+!/vagrant//puphpet/files/dot/ssh/insecure_private_key
 
 .idea
 webroot/wp-content/uploads/compmodule
