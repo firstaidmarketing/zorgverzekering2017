@@ -232,7 +232,7 @@ class Keuze_Theme {
 		wp_register_script( 'modernizr', keuze_theme_url( 'assets/js/vendor/modernizr-2.8.3.min.js' ), null, null, true );
 		wp_enqueue_script( 'modernizr' );
 
-		wp_register_script( 'keuze', keuze_theme_url( 'assets/js/main.min.js' ), array('jquery'), null, true );
+		wp_register_script( 'keuze', keuze_theme_url( 'assets/js/main' . ( SCRIPT_DEBUG ? '' : '.min' ) .'.js' ), array('jquery'), null, true );
 		wp_enqueue_script( 'keuze' );
 	}
 

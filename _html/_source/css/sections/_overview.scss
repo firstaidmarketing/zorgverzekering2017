@@ -67,7 +67,7 @@
 				a {
 					padding-top: 10px;
 					color: $green;
-					border: 3px solid #d8dcdf;
+					border: 3px solid #00ba8b;
 					border-bottom: 0;
 
 					&:after {
@@ -107,6 +107,15 @@
 	.left {
 		padding: rhythm(1);
 		padding-bottom: 0;
+
+		.btn-wrapper {
+			margin-bottom: rhythm(1);
+
+			.button {
+				display: block;
+				width: 100%;
+			}
+		}
 
 		.toggle-subnav {
 			display: none;

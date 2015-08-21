@@ -63,11 +63,14 @@ jQuery(document).ready(function($) {
         startCollapsed: false,
         animation: _window.width() < keuze.settings.tabletWidth ? 'slide' : 'none'
     });
-    $('#overview-tabs').responsiveTabs({
-        startCollapsed: false,
-        collapse: false,
-        animation: 'none'
-    }).find('.nav-tab').appendTo( $('#overview-tabs .top .right') );
+	if( $('.on-compare-page').length > 0 ) {
+		$('#overview-tabs').responsiveTabs({
+			startCollapsed: false,
+			collapse: false,
+			animation: 'none'
+		});
+	}
+	$('#overview-tabs').find('.nav-tab').appendTo( $('#overview-tabs .top .right') );
 
     // Accordion
     keuze.setAccordions();
@@ -81,8 +84,9 @@ jQuery(document).ready(function($) {
     keuze.setEqualHeights();
 
     // Scroll to internal anchor tags
-    $('aside.left a[href*=#]').on('click',function (e) {
+    $('#sidebar-nav a[href*=#]').on('click',function (e) {
         var target = this.hash;
+		console.log( target );
         if( target != '' && typeof target != 'undefined' ) {
             e.preventDefault();
             keuze.scrollToHash( target );
@@ -94,6 +98,9 @@ jQuery(document).ready(function($) {
 		setTimeout(function() {
 			window.scrollTo(0, 0);
 		}, 1);
+	}
+	else if( location.hash != '' ) {
+		keuze.scrollToHash( location.hash );
 	}
 
 	// Floating navigation
@@ -258,7 +265,7 @@ jQuery(document).ready(function($) {
 
         function scrollToHash( target ) {
             $('html, body').stop().animate({
-                'scrollTop': $(target).offset().top
+				'scrollTop': $(target).offset().top - _header.outerHeight() - 40
             }, 900, 'swing', function () {
                 window.location.hash = target;
             });

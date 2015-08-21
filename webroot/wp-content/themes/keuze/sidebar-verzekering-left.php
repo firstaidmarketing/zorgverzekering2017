@@ -1,5 +1,5 @@
 <?php
-    global $post;
+    global $post, $compare_url;
 
     $is_child_page = $post->post_parent > 0;
     $parent_id = $is_child_page ? $post->post_parent : $post->ID;
@@ -33,6 +33,11 @@
     }
 
 ?>
+
+<div class="btn-wrapper">
+    <a href="<?php echo esc_url( $compare_url ); ?>#vergelijken" class="button">Vergelijken</a>
+</div>
+
 <a href="javascript:;" class="toggle-subnav">
     <span class="bars"><span></span><span></span><span></span></span>
     <span class="text">Toon menu</span>
@@ -58,3 +63,7 @@
         }
     ?>
 </ul>
+
+<?php
+    $compare_url = null;
+?>

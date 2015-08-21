@@ -2701,7 +2701,7 @@ article.post h2 {
   margin-bottom: 1.15rem;
   line-height: 1.5em;
   font-weight: bold;
-  color: #6e8faf;
+  color: #293949;
 }
 article.post a {
   text-decoration: underline;
@@ -2792,7 +2792,7 @@ article.post ul ol li {
 .search-overview .nav-tab li.r-tabs-state-active a {
   padding-top: 10px;
   color: #00ba8b;
-  border: 3px solid #d8dcdf;
+  border: 3px solid #00ba8b;
   border-bottom: 0;
 }
 .search-overview .nav-tab li.r-tabs-state-active a:after {
@@ -2830,6 +2830,13 @@ article.post ul ol li {
 .results .left {
   padding: 2.3rem;
   padding-bottom: 0;
+}
+.results .left .btn-wrapper {
+  margin-bottom: 2.3rem;
+}
+.results .left .btn-wrapper .button {
+  display: block;
+  width: 100%;
 }
 .results .left .toggle-subnav {
   display: none;
