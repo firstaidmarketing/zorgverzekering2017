@@ -32,19 +32,17 @@ if( count( $path ) > 1 ) {
 
 	<div class="results">
 		<section id="keuzehulp" class="tab">
-			<aside class="left">
-				<?php get_sidebar('verzekering-left'); ?>
-			</aside>
+			<div>
+				<div class="comparehow"><a href="/keuze-nl/zo-werkt-keuze-nl/">Lees hier hoe wij onze vergelijking maken</a></div>
+				<?php
+				$komparu_script = get_field( 'komparu_script' );
+				$content = do_shortcode( $komparu_script );
+
+				echo $content;
+				?>
+			</div>
 			<div class="right">
 				<div class="inner">
-					<div class="comparehow"><a href="/keuze-nl/zo-werkt-keuze-nl/">Lees hier hoe wij onze vergelijking maken</a></div>
-					<?php
-					$komparu_script = get_field( 'komparu_script' );
-					$content = do_shortcode( $komparu_script );
-
-					echo $content;
-					?>
-
 					<article class="post" itemscope itemtype="http://schema.org/Article">
 						<h1 itemprop="name"><?php echo keuze_get_title( get_the_ID() ); ?></h1>
 						<?php the_content(); ?>
