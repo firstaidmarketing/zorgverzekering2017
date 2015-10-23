@@ -2,11 +2,11 @@
 // ===================================================
 // Load database info and local development parameters
 // ===================================================
-if ( file_exists( dirname( __FILE__ ) . '/wp-config-local.php' ) ) {
-	define( 'WP_ENV', 'local' );
-	include( dirname( __FILE__ ) . '/wp-config-local.php' );
-}
-elseif ( file_exists( dirname( __FILE__ ) . '/../../env_production' ) ) {
+//if ( file_exists( dirname( __FILE__ ) . '/wp-config-local.php' ) ) {
+//	define( 'WP_ENV', 'local' );
+//	include( dirname( __FILE__ ) . '/wp-config-local.php' );
+//}
+//elseif ( file_exists( dirname( __FILE__ ) . '/../../env_production' ) ) {
 
     // Production Environment
     define( 'WP_ENV', 'production' );
@@ -18,13 +18,13 @@ elseif ( file_exists( dirname( __FILE__ ) . '/../../env_production' ) ) {
     define( 'DB_PASSWORD', 'f267caf3-cbd2-40cd-a291-025dc719ccf7' );
     define( 'DB_HOST', 'localhost' );
 
-}
-else {
+//}
+//else {
 
 	// Environment definition is mandatory
-	die("Environment not defined. Please see wp-config.php");
+//	die("Environment not defined. Please see wp-config.php");
 
-}
+//}
 
 // ================================================
 // You almost certainly do not want to change these

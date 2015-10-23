@@ -284,18 +284,18 @@
         "source": {
             "type": "git",
             "url": "git@github.com:komparu/php-client.git",
-            "reference": "6988bf9b953a68cb302300ff9b65fe8fbdb6654f"
+            "reference": "4342cba7f2f603d7bffd2836a6e02048ecc8538c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/komparu/php-client/zipball/6988bf9b953a68cb302300ff9b65fe8fbdb6654f",
-            "reference": "6988bf9b953a68cb302300ff9b65fe8fbdb6654f",
+            "url": "https://api.github.com/repos/komparu/php-client/zipball/4342cba7f2f603d7bffd2836a6e02048ecc8538c",
+            "reference": "4342cba7f2f603d7bffd2836a6e02048ecc8538c",
             "shasum": ""
         },
         "require": {
             "guzzlehttp/guzzle": "~4.2"
         },
-        "time": "2015-07-16 09:57:56",
+        "time": "2015-09-02 15:15:49",
         "type": "library",
         "installation-source": "source",
         "autoload": {

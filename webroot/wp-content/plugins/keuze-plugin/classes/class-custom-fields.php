@@ -248,8 +248,24 @@ class Keuze_Custom_Fields {
 						'value' => 'templates/tpl-verzekering.php',
 						'order_no' => 1,
 						'group_no' => 1,
-					),
+					)
 				),
+				array (
+					array (
+						'param' => 'post_type',
+						'operator' => '==',
+						'value' => 'page',
+						'order_no' => 0,
+						'group_no' => 1,
+					),
+					array (
+						'param' => 'page_template',
+						'operator' => '==',
+						'value' => 'templates/tpl-verzekering-notabs.php',
+						'order_no' => 1,
+						'group_no' => 1,
+					)
+				)
 			),
 			'options' => array (
 				'position' => 'normal',

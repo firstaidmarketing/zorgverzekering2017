@@ -12,9 +12,13 @@ class MediaController extends BaseController
 
         $url_data = parse_url($url);
         if (stristr($url_data['host'], 'komparu')) {
-            $client = new GuzzleHttp\Client();
+            $client = new GuzzleHttp\Client([
+                'defaults' => ['headers' => ['User-Agent' => $_SERVER['HTTP_USER_AGENT']]]
+            ]);
 
-            $url .= (parse_url($url, PHP_URL_QUERY) ? '&' : '?') . 'sid=' . SessionHelper::getSid($this->plugin);
+            $url .= (parse_url($url, PHP_URL_QUERY) ? '&' : '?')
+                    . 'sid=' . SessionHelper::getSid($this->plugin)
+                    . '&ip=' . $_SERVER['REMOTE_ADDR'];
 
             $response = $client->get($url, ['allow_redirects' => false]);
 

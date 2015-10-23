@@ -366,7 +366,7 @@ class Client
             file_put_contents('errorapi.html', '<pre>' . $message . '</pre>');
             echo "<html><head><title>" . $response->getReasonPhrase() . "</title><link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>"
                  . "<style>*{font-family:'Open Sans', Arial;color:#333;}#trace{padding:1em;border-radius:5px;background:#fff;opacity:.9;}#trace p{line-height:1.5em;padding:.5em 1em;margin:0;}"
-                 . "#trace p:nth-child(6){background:yellow;}}</style></head><body style='margin:0;background:red;height:100%;'><div style='padding:1em 3em;'>";
+                 . "#trace p:nth-child(6){background:yellow;}}</style></head><body style='margin:0;background:pink;height:100%;'><div style='padding:1em 3em;'>";
             echo "<h1>" . $response->getReasonPhrase() . " <br /><a href='" . $response->getEffectiveUrl() . "' style='word-wrap: break-word;overflow: hidden;color:blue;'> " . urldecode($response->getEffectiveUrl()) . "</a></h1>";
             echo "<iframe src='/errorapi.html' width='100%' height='50%' style='border:0;margin-bottom:3em;'></iframe>";
             $exception = new \Exception(urldecode($response->getReasonPhrase() . " => " . $response->getEffectiveUrl()));
