@@ -8,12 +8,12 @@
 	<p>
 		<label for="zorg-eigenrisico">Eigen risico</label>
 		<select name="healthcare-own_risk" id="zorg-eigenrisico">
-			<option value="375">€ 375,-</option>
-			<option value="475">€ 475,-</option>
-			<option value="575">€ 575,-</option>
-			<option value="675">€ 675,-</option>
-			<option value="775">€ 775,-</option>
-			<option value="875">€ 875,-</option>
+			<option value="385">€ 385,-</option>
+			<option value="485">€ 485,-</option>
+			<option value="585">€ 585,-</option>
+			<option value="685">€ 685,-</option>
+			<option value="785">€ 785,-</option>
+			<option value="885">€ 885,-</option>
 		</select>
 	</p>
     <p class="buttons">
